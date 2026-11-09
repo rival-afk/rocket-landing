@@ -12,8 +12,9 @@
   `docs/img/chart_ppo.png`).
 - **GA** (ранняя эволюционная версия, numpy): рекорд **52.92 м** за 241
   поколение (`training/log.csv`, `docs/img/chart_ga.png`).
-- **TAS**: идеальный забег **59.60 м, 2279 тиков**, лента проверена в реальной
-  физике игры — PASS (`tas/tape.json`, `../docs/TAS.md`).
+- **TAS**: идеальный забег **60.12 м за 13.2 с (791 тик)**, равномерный
+  спуск ~230 px/с, лента проверена в реальной физике — PASS
+  (`tas/tape.json`, `../docs/TAS.md`).
 
 ## Запуск обучения
 
@@ -56,7 +57,7 @@ godot --headless --path game -- --spawn=8 &
   историческая запись 52.92 м).
 - `training/ppo/*.pt` — последние и лучшие веса PPO (best — по mean reward
   за 20 эпизодов).
-- `tas/tape.json` — TAS-лента: 59.60 м, 2279 тиков (расчёт
+- `tas/tape.json` — TAS-лента: 60.12 м, 791 тик (расчёт
   `game/tas_headless.gd`, beam 96/128, проверка `/tas/verify` — PASS,
   `max_err=0.65 px`; подробности — `../docs/TAS.md`).
 

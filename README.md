@@ -21,7 +21,7 @@
   проверить в реальной физике. Модель откалибрована бит-в-бит по движку
   (ломаная стена 16 px + `linear_damp=0.1` / `angular_damp=1.0`); есть
   headless-вариант запуска без GUI (`game/tas_headless.gd`). Текущий рекорд:
-  **59.60 м, 2279 тиков, verify — PASS** ([`ai/tas/tape.json`](ai/tas/tape.json),
+  **60.12 м за 13.2 с (791 тик), verify — PASS** ([`ai/tas/tape.json`](ai/tas/tape.json),
   подробности в [`docs/TAS.md`](docs/TAS.md)).
 - **Сенсорное управление** (только Android): кнопки ◀ ▶ и «ТЯГА» на экране.
 - **Меню**: при обычном запуске (не headless, не через `--api`) игра стартует
@@ -48,7 +48,7 @@ PPO-агент обучается в реальном времени через 
 
 ![bench](docs/img/chart_bench.png)
 
-TAS — путь ракеты в идеальном забеге (59.60 м, лента проверена в игре):
+TAS — путь ракеты в идеальном забеге (60.12 м, лента проверена в игре):
 
 ![TAS](docs/img/chart_tas.png)
 
@@ -90,7 +90,7 @@ godot --path game -- --spawn=8   # 8 параллельных игр
 godot --headless --path game
 
 # TAS без GUI (GPU-compute, иначе честный CPU ×2)
-godot --path game -s tas_headless.gd -- --beam-main=96 --beam-worker=128 --out=user://tas.json
+godot --path game -s tas_headless.gd -- --beam-main=192 --beam-worker=192 --out=user://tas.json
 ```
 
 ## API (кратко)

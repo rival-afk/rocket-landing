@@ -5,8 +5,8 @@
 #   godot --path game -s tas_headless.gd -- [опции]     # с дисплеем: GPU-compute, если Vulkan есть
 #
 # Опции (после `--`):
-#   --beam-main=24     луч главного (GPU/CPU) экземпляра
-#   --beam-worker=32   луч второго (CPU-поток) экземпляра
+#   --beam-main=192    луч главного (GPU/CPU) экземпляра
+#   --beam-worker=192  луч второго (CPU-поток) экземпляра
 #   --max-ticks=2700   лимит тиков (60 Гц; 2700 = 45 с игрового времени)
 #   --out=user://tas.json   куда сохранить ленту
 #   --quiet            не печатать прогресс каждые 5 с
@@ -28,8 +28,8 @@ var _last_report_msec := 0
 var _started_msec := 0
 
 func _initialize() -> void:
-	var beam_main := 24
-	var beam_worker := 32
+	var beam_main := 192
+	var beam_worker := 192
 	var max_ticks := 2700
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--beam-main="):

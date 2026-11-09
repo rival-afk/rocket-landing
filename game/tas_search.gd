@@ -46,7 +46,7 @@ const ACTIONS := [
 	{"name": "▲+→", "thrust": true,  "torque": 1.0},
 ]
 
-const MAX_NODES := 1500000    # потолок памяти: дальше автостоп
+const MAX_NODES := 6000000    # потолок памяти: дальше автостоп
 
 var beam_width := 24
 var max_ticks := 2700         # 45 с игрового времени
