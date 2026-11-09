@@ -1,0 +1,42 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://3f7udemueb2l" path="res://rocket.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bjhx5rairj8li" path="res://torque.gd" id="2_0xm2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e82u5"]
+size = Vector2(20, 24)
+
+[node name="Rocket" type="RigidBody2D"]
+collision_mask = 2
+continuous_cd = 2
+script = ExtResource("2_0xm2m")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ig7tw")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_e82u5")
+
+[node name="Camera" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="LidarRight" type="RayCast2D" parent="."]
+target_position = Vector2(280, 0)
+collision_mask = 2
+
+[node name="LidarRightDown" type="RayCast2D" parent="."]
+target_position = Vector2(198, 198)
+collision_mask = 2
+
+[node name="LidarDown" type="RayCast2D" parent="."]
+target_position = Vector2(0, 280)
+collision_mask = 2
+
+[node name="LidarLeftDown" type="RayCast2D" parent="."]
+target_position = Vector2(-198, 198)
+collision_mask = 2
+
+[node name="LidarLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-280, 0)
+collision_mask = 2
