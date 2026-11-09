@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://bl0j84fqqr5c8"
+path="res://.godot/imported/tas_kernel.glsl-d61a37aedd426ba068f572980d4ba983.res"
+
+[deps]
+
+source_file="res://tas_kernel.glsl"
+dest_files=["res://.godot/imported/tas_kernel.glsl-d61a37aedd426ba068f572980d4ba983.res"]
+
+[params]
+

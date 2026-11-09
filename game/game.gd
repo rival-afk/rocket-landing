@@ -151,8 +151,11 @@ func _ready() -> void:
 		add_child(_touch)
 
 	# debug-флаг: --shot <path.png> — снять кадр через 1.5 сек и выйти.
+	# Дедлайн ставим один раз на процесс: после reload_current_scene _ready
+	# вызывается снова, и без защиты дедлайн вечно сдвигался бы вперёд
+	# (ракета в пещере падает без ввода и падает/рестартует чаще 1.5 с).
 	for i in user_args.size():
-		if user_args[i] == "--shot" and i + 1 < user_args.size():
+		if user_args[i] == "--shot" and i + 1 < user_args.size() and _shot_deadline < 0:
 			_shot_path = user_args[i + 1]
 			_shot_deadline = Time.get_ticks_msec() + 1500
 

@@ -9,7 +9,8 @@ extends RefCounted
 # оставляем BEAM лучших состояний (по близости к дну пещеры с учётом
 # отклонения от центра коридора) и отбрасываем состояния, в которых ракета
 # пересекается со стеной. Пещера детерминирована, формулы повторяют cave.gd
-# один в один, поэтому траектории предсказуемы и воспроизводимы.
+# один в один, физика — движок (см. _integrate), поэтому траектории
+# предсказуемы и воспроизводимы.
 #
 # Цель: найти путь с максимальным рекордом (глубина, м) и минимальным временем.
 # На выходе — лента TAS (inputs/samples) в том же формате, что пишет _tas_save,
@@ -19,9 +20,14 @@ extends RefCounted
 const TICK := 1.0 / 60.0
 const GRAVITY := 980.0
 const THRUST_ACCEL := 1500.0
+const ANGULAR_VEL := 4.0      # rad/с при torque=±1 (как в torque.gd)
+# Движок (Godot physics 2D, 4.x) сам гасит скорости каждый тик ДО применения
+# сил: physics/2d/default_linear_damp=0.1, default_angular_damp=1.0.
+# Без этого модель систематически перелетает по vy и rot за несколько сотен тиков.
+const LINEAR_DAMP := 0.1      # vx, vy *= (1 - LINEAR_DAMP * TICK) — до сил
+const ANGULAR_DAMP := 1.0     # ω *= (1 - ANGULAR_DAMP * TICK) — до интеграции угла
 const ROCKET_HALF_W := 12.0   # половина ширины + 2 px запаса (коллизия 20x24)
 const ROCKET_HALF_H := 14.0   # половина высоты + 2 px запаса
-const ANGULAR_VEL := 4.0      # рад/с при torque=±1 (как в torque.gd)
 
 # те же константы, что в cave.gd — пещера обязана совпадать бит-в-бит
 const MAX_SHIFT := 175.0
@@ -29,6 +35,7 @@ const MIN_HALF := 60.0
 const HALF_VAR := 55.0
 const KNOT := 256.0
 const SOFTEN_Y := 3.0 * KNOT  # плавный выход из стартовой точки
+const STEP := 16.0          # шаг точек ломаной стены (как cave.gd STEP)
 
 const ACTIONS := [
 	{"name": "-",   "thrust": false, "torque": 0.0},
@@ -176,9 +183,12 @@ func _generate_children_cpu(beam_ids: Array[int]) -> Array:
 			out.append([nx, ny, nvx, nvy, nrot, nid, ai, _score(nx, ny, nvx, nvy), 1.0 if _hits_rock(nx, ny, nrot) else 0.0])
 	return out
 
+# Интегратор повторяет Godot 2D physics бит-в-бит (проверено трассировкой):
+#   v *= (1 - LINEAR_DAMP * TICK)  →  v += (gravity [+ thrust]) * TICK  →  pos += v * TICK
+#   ω (из torque.gd) *= (1 - ANGULAR_DAMP * TICK)  →  rot += ω * TICK
 func _integrate(x: float, y: float, vx: float, vy: float, rot: float, thrust: bool, torque: float) -> Array:
-	# порядок шагов повторяет: torque.gd задаёт angular_velocity/силу ДО физшага,
-	# затем движок интегрирует (semi-implicit Euler, dt = 1/60)
+	vx *= 1.0 - LINEAR_DAMP * TICK
+	vy *= 1.0 - LINEAR_DAMP * TICK
 	vy += GRAVITY * TICK
 	if thrust:
 		# Vector2.UP.rotated(rot) = (sin(rot), -cos(rot))
@@ -186,7 +196,7 @@ func _integrate(x: float, y: float, vx: float, vy: float, rot: float, thrust: bo
 		vy += -cos(rot) * THRUST_ACCEL * TICK
 	x += vx * TICK
 	y += vy * TICK
-	rot += torque * ANGULAR_VEL * TICK
+	rot += torque * ANGULAR_VEL * (1.0 - ANGULAR_DAMP * TICK) * TICK
 	return [x, y, vx, vy, rot]
 
 # 9 контрольных точек ракеты (центр + углы + середины рёбер повёрнутого
@@ -210,10 +220,22 @@ func _hits_rock(x: float, y: float, rot: float) -> bool:
 			return true
 	return false
 
+# Стена в cave.gd — ломаная по точкам каждые STEP px (ровно тот же полигон,
+# что у kill-Area2D), а НЕ гладкий коридор. В местах излома стена чуть
+# ближе, чем smooth-кривая, и 2 px запаса полуширины ракеты это перекрывают
+# не всегда — поэтому проверяем именно ломаную (бит-в-бит с игрой).
 func _hits_point(px: float, py: float) -> bool:
-	var c := cave_center(py)
-	var h := cave_half(py)
-	return absf(px - c) >= h
+	var y0: float = floorf(py / STEP) * STEP
+	var t: float = (py - y0) / STEP
+	var c0 := cave_center(y0)
+	var c1 := cave_center(y0 + STEP)
+	var h0 := cave_half(y0)
+	var h1 := cave_half(y0 + STEP)
+	if px <= lerpf(c0 - h0, c1 - h1, t):
+		return true
+	if px >= lerpf(c0 + h0, c1 + h1, t):
+		return true
+	return false
 
 # оценка пригодности ветви: глубже = лучше; штраф за отклонение от центра
 # (с небольшим упреждающим весом) и ГЛАВНОЕ — за скорость падения выше

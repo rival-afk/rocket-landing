@@ -1,6 +1,7 @@
 #version 450
 // TAS: один тик перебора. Каждая нить = одна комбинация (beam-запись × действие).
-// Интегрирует физику как в torque.gd + Godot 2D (semi-implicit Euler, dt = 1/60),
+// Интегрирует физику как в torque.gd + Godot 2D (dt = 1/60, v *= 1-damp*dt до сил,
+// потом gravity/thrust, потом pos += v*dt; угловая скорость тоже гасится: см. LINEAR_DAMP/ANGULAR_DAMP),
 // проверяет пересечение ракеты со стеной пещеры (5 точек), считает score.
 // Формулы пещеры повторяют cave.gd бит в бит.
 
@@ -18,6 +19,10 @@ const float GRAVITY = 980.0;
 const float THRUST = 1500.0;
 const float TICK = 1.0 / 60.0;
 const float ANGULAR = 4.0;
+// движок гасит скорости каждый тик ДО сил: physics/2d/default_linear_damp=0.1,
+// default_angular_damp=1.0 (дефолты Godot 4) — без этого модель расходится за сотни тиков
+const float LINEAR_DAMP = 0.1;
+const float ANGULAR_DAMP = 1.0;
 const float HALF_W = 12.0;
 const float HALF_H = 14.0;
 
@@ -53,10 +58,26 @@ float cave_half(float y) {
     return mix(knot_half(k), knot_half(k + 1.0), t);
 }
 
+const float STEP = 16.0;   // шаг ломаной стены (как cave.gd STEP)
+
+// стена — ломаная по точкам каждые STEP px (как полигон kill-Area2D),
+// а не гладкий коридор: в местах излома стена чуть ближе
+float edge_left(float y) {
+    float y0 = floor(y / STEP) * STEP;
+    float c0 = cave_center(y0), c1 = cave_center(y0 + STEP);
+    float h0 = cave_half(y0), h1 = cave_half(y0 + STEP);
+    return mix(c0 - h0, c1 - h1, (y - y0) / STEP);
+}
+
+float edge_right(float y) {
+    float y0 = floor(y / STEP) * STEP;
+    float c0 = cave_center(y0), c1 = cave_center(y0 + STEP);
+    float h0 = cave_half(y0), h1 = cave_half(y0 + STEP);
+    return mix(c0 + h0, c1 + h1, (y - y0) / STEP);
+}
+
 bool hits_point(float px, float py) {
-    float c = cave_center(py);
-    float h = cave_half(py);
-    return abs(px - c) >= h;
+    return px <= edge_left(py) || px >= edge_right(py);
 }
 
 float off_at(float x, float y) {
@@ -83,6 +104,8 @@ void main() {
     float torque = torques[action];
     bool thrust = action >= 3u;
 
+    vx *= 1.0 - LINEAR_DAMP * TICK;
+    vy *= 1.0 - LINEAR_DAMP * TICK;
     vy += GRAVITY * TICK;
     if (thrust) {
         vx += sin(rot) * THRUST * TICK;
@@ -90,7 +113,7 @@ void main() {
     }
     x += vx * TICK;
     y += vy * TICK;
-    rot += torque * ANGULAR * TICK;
+    rot += torque * ANGULAR * (1.0 - ANGULAR_DAMP * TICK) * TICK;
 
     // пересечение: 9 точек повёрнутого прямоугольника (с запасом 2 px)
     float cR = cos(rot);

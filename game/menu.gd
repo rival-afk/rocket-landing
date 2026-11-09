@@ -135,7 +135,7 @@ func _on_run_pressed() -> void:
 	_start_search()
 
 func _start_search() -> void:
-	_coop = TASSearchCoop.new(24, 32, 2700)
+	_coop = TASSearchCoop.new(96, 128, 2700)
 	_last_stats = {}
 	_state_label.text = "Идёт перебор путей…"
 	_progress_label.text = "тик 0 · глубина 0.00 м"
