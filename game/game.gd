@@ -12,7 +12,7 @@ extends Node2D
 # API (по умолчанию на 127.0.0.1:8080, порт меняется аргументом --port=N):
 # см. API_README.md — полное описание всех эндпоинтов.
 
-const VERSION := "1.0.0"     # перезаписывается build-скриптом
+const VERSION := "1.1.0"     # перезаписывается build-скриптом
 const COMMIT := "dev"        # перезаписывается build-скриптом
 const BUILD_DATE := ""       # перезаписывается build-скриптом
 
@@ -42,6 +42,8 @@ static var _version_printed := false
 static var _api_banner_printed := false
 static var _api_timing := false
 var api_host: Node = null
+var _menu: Node = null
+var _touch: Node = null
 
 # кэш готовых JSON-ответов на /state (одно и то же в пределах физтика)
 var _state_cache_tick := -1
@@ -131,6 +133,22 @@ func _ready() -> void:
 	if quit_if_port_busy and err != OK:
 		get_tree().quit()
 		return
+
+	# Меню — только при обычном запуске (не API, не headless, не --shot).
+	# --api: запуск «через API» (тренажёр): меню не показываем вовсе.
+	# Любой запрос к API также автоматически закрывает меню (см. _handle_request).
+	if DisplayServer.get_name() != "headless":
+		var suppressed := false
+		for arg in user_args + OS.get_cmdline_args():
+			if arg == "--api" or arg == "--shot":
+				suppressed = true
+		if not suppressed:
+			_menu = preload("res://menu.gd").new()
+			_menu.game_ref = self
+			add_child(_menu)
+		# Сенсорное управление — только в Android-сборке
+		_touch = preload("res://touch.gd").new()
+		add_child(_touch)
 
 	# debug-флаг: --shot <path.png> — снять кадр через 1.5 сек и выйти.
 	for i in user_args.size():
@@ -644,8 +662,9 @@ func _on_lane_killed(body: Node2D, id: int) -> void:
 	lane.hud.panel_sb.border_color = Color(0.85, 0.25, 0.25)
 	lane.viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
 
-	if lanes.size() == 1:
+	if lanes.size() == 1 and not _tas_any_active():
 		# solo-режим (одна игра) — полная перезагрузка сцены
+		# (при активном TAS замораживаем, не перезагружаем: проверка должна увидеть падение)
 		get_tree().call_deferred("reload_current_scene")
 	else:
 		# параллельные игры: замораживаем только эту (defer — колбэк из физики)
@@ -826,6 +845,7 @@ func _parse_query(q: String) -> Dictionary:
 	return out
 
 func _handle_request(head: String, body: String) -> String:
+	_menu_note_api_activity()
 	var first_line := head.split("\r\n")[0]
 	var parts := first_line.split(" ")
 	if parts.size() < 3:
@@ -945,6 +965,22 @@ func _handle_request(head: String, body: String) -> String:
 					return _resp(404, {"error": "not found"})
 		_:
 			return _resp(405, {"error": "method not allowed"})
+
+# --- меню / сенсор ---
+
+func _menu_note_api_activity() -> void:
+	if _menu != null and is_instance_valid(_menu):
+		_menu.note_api_activity()
+
+func _set_touch_visible(v: bool) -> void:
+	if _touch != null and is_instance_valid(_touch):
+		_touch.set_touch_visible(v)
+
+func _tas_any_active() -> bool:
+	for lane in lanes:
+		if lane.tas.get("mode", "idle") != "idle":
+			return true
+	return false
 
 func _delete_lane_resp(id: int) -> String:
 	if lanes.size() <= 1:
