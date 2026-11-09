@@ -1,0 +1,44 @@
+Traceback (most recent call last):
+  File "C:\Users\stude\OneDrive\Рабочий стол\ivanovich\rocket-ai\training\ppo_train.py", line 344, in run_forever
+    r = http_post("/control", body, timeout=5)
+  File "C:\Users\stude\OneDrive\Рабочий стол\ivanovich\rocket-ai\training\ppo_train.py", line 91, in http_post
+    return json.loads(urllib.request.urlopen(req, timeout=timeout).read().decode())
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\urllib\request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\urllib\request.py", line 1364, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\urllib\request.py", line 1339, in do_open
+    r = h.getresponse()
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\http\client.py", line 1490, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\http\client.py", line 350, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\stude\AppData\Local\Programs\Python\Python315\Lib\http\client.py", line 314, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+                             " response")
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\stude\OneDrive\Рабочий стол\ivanovich\rocket-ai\training\ppo_train.py", line 426, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\stude\OneDrive\Рабочий стол\ivanovich\rocket-ai\training\ppo_train.py", line 422, in main
+    run_forever(learners)
+    ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\stude\OneDrive\Рабочий стол\ivanovich\rocket-ai\training\ppo_train.py", line 350, in run_forever
+    raise RuntimeError("too many API errors - is the game closed?")
+RuntimeError: too many API errors - is the game closed?

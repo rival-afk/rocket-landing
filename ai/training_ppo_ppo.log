@@ -1,0 +1,26 @@
+lanes: [0, 1, 2, 3, 4, 5, 6, 7], cuda=True, time_scale=1.0
+[gpu] resumed from C:\Users\stude\OneDrive\Рабочий стол\ivanovich\rocket-ai\training\ppo\gpu_last.pt iter=19
+[cpu] resumed from C:\Users\stude\OneDrive\Рабочий стол\ivanovich\rocket-ai\training\ppo\cpu_last.pt iter=13
+learners: [('gpu', [0, 1, 2, 3]), ('cpu', [4, 5, 6, 7])]
+[gpu] iter 20: mean_rew=3.16 depth=4.52 ent=1.254 kl=0.0043 best=4.92 deaths=208 trunc=0
+[cpu] iter 14: mean_rew=3.31 depth=7.10 ent=1.342 kl=0.0056 best=4.02 deaths=225 trunc=0
+[gpu] iter 21: mean_rew=4.39 depth=6.83 ent=1.125 kl=0.0153 best=4.92 deaths=186 trunc=0
+[cpu] iter 15: mean_rew=4.67 depth=7.15 ent=1.224 kl=0.0024 best=4.67 deaths=181 trunc=0
+[gpu] iter 22: mean_rew=5.33 depth=6.14 ent=1.091 kl=0.0009 best=5.33 deaths=171 trunc=0
+[cpu] iter 16: mean_rew=4.23 depth=6.66 ent=1.243 kl=0.0018 best=4.67 deaths=188 trunc=0
+watchdog: force respawn all
+[gpu] iter 23: mean_rew=5.63 depth=5.49 ent=1.110 kl=-0.0030 best=5.63 deaths=149 trunc=0
+[cpu] iter 17: mean_rew=4.59 depth=8.02 ent=1.114 kl=-0.0028 best=4.67 deaths=170 trunc=0
+[gpu] iter 24: mean_rew=6.61 depth=7.81 ent=1.088 kl=0.0012 best=6.61 deaths=153 trunc=0
+[cpu] iter 18: mean_rew=5.71 depth=6.90 ent=1.092 kl=-0.0072 best=5.71 deaths=151 trunc=0
+[gpu] iter 25: mean_rew=6.02 depth=7.14 ent=1.057 kl=0.0028 best=6.61 deaths=143 trunc=0
+[cpu] iter 19: mean_rew=7.18 depth=7.96 ent=1.076 kl=0.0006 best=7.18 deaths=148 trunc=0
+warn: respawn lane 7 failed: HTTP Error 404: Not Found
+warn: respawn lane 0 failed: HTTP Error 404: Not Found
+warn: respawn lane 2 failed: HTTP Error 404: Not Found
+warn: respawn lane 3 failed: HTTP Error 404: Not Found
+warn: respawn lane 5 failed: HTTP Error 404: Not Found
+warn: respawn lane 4 failed: HTTP Error 404: Not Found
+warn: respawn lane 1 failed: HTTP Error 404: Not Found
+warn: respawn lane 6 failed: HTTP Error 404: Not Found
+FATAL: too many API errors - is the game closed?

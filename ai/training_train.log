@@ -1,0 +1,168 @@
+ensuring game API + lanes...
+using lanes: [0, 1, 2, 3, 4, 5, 6, 7, 17, 18, 19, 20], time_scale=2.0
+gen 1: NEW BEST 1.63 (raw 9.95 m)
+gen 1: best=1.63 mean=1.17 raw_best=10.45m mean_vy=495 sigma=0.348 best_ever=1.63 (1.0s)
+gen 2: best=1.58 mean=1.02 raw_best=10.45m mean_vy=507 sigma=0.347 best_ever=1.63 (0.9s)
+gen 3: NEW BEST 1.63 (raw 10.12 m)
+gen 3: best=1.63 mean=1.08 raw_best=10.45m mean_vy=518 sigma=0.345 best_ever=1.63 (0.9s)
+gen 4: best=1.63 mean=1.08 raw_best=10.45m mean_vy=510 sigma=0.343 best_ever=1.63 (0.9s)
+gen 5: best=1.24 mean=0.91 raw_best=10.45m mean_vy=541 sigma=0.341 best_ever=1.63 (1.0s)
+gen 6: best=1.63 mean=0.94 raw_best=10.45m mean_vy=564 sigma=0.340 best_ever=1.63 (0.9s)
+gen 7: best=1.18 mean=1.08 raw_best=10.35m mean_vy=546 sigma=0.338 best_ever=1.63 (1.1s)
+gen 8: best=0.76 mean=0.72 raw_best=9.81m mean_vy=398 sigma=0.336 best_ever=1.63 (0.9s)
+gen 9: best=0.83 mean=0.71 raw_best=9.81m mean_vy=403 sigma=0.335 best_ever=1.63 (0.9s)
+gen 10: best=0.94 mean=0.83 raw_best=10.45m mean_vy=551 sigma=0.333 best_ever=1.63 (0.9s)
+gen 11: best=1.41 mean=0.91 raw_best=10.44m mean_vy=556 sigma=0.331 best_ever=1.63 (0.9s)
+gen 12: best=1.63 mean=1.00 raw_best=10.45m mean_vy=560 sigma=0.330 best_ever=1.63 (0.9s)
+gen 13: NEW BEST 1.64 (raw 9.95 m)
+gen 13: best=1.64 mean=1.04 raw_best=10.45m mean_vy=513 sigma=0.328 best_ever=1.64 (0.9s)
+gen 14: NEW BEST 1.68 (raw 9.95 m)
+gen 14: best=1.68 mean=0.98 raw_best=10.45m mean_vy=578 sigma=0.326 best_ever=1.68 (0.9s)
+gen 15: best=1.60 mean=1.06 raw_best=10.45m mean_vy=554 sigma=0.325 best_ever=1.68 (1.0s)
+gen 16: best=0.83 mean=0.72 raw_best=9.81m mean_vy=399 sigma=0.323 best_ever=1.68 (0.9s)
+gen 17: best=0.83 mean=0.68 raw_best=9.81m mean_vy=408 sigma=0.321 best_ever=1.68 (0.9s)
+gen 18: best=0.91 mean=0.70 raw_best=9.81m mean_vy=421 sigma=0.320 best_ever=1.68 (0.9s)
+gen 19: best=1.18 mean=0.93 raw_best=10.45m mean_vy=595 sigma=0.318 best_ever=1.68 (0.9s)
+gen 20: best=1.26 mean=0.90 raw_best=10.12m mean_vy=454 sigma=0.317 best_ever=1.68 (0.9s)
+gen 21: best=1.18 mean=0.87 raw_best=10.45m mean_vy=509 sigma=0.315 best_ever=1.68 (0.9s)
+gen 22: best=1.18 mean=0.88 raw_best=10.45m mean_vy=547 sigma=0.313 best_ever=1.68 (0.9s)
+gen 23: best=1.56 mean=1.07 raw_best=10.12m mean_vy=478 sigma=0.312 best_ever=1.68 (0.9s)
+gen 24: best=0.76 mean=0.66 raw_best=9.81m mean_vy=417 sigma=0.310 best_ever=1.68 (0.9s)
+gen 25: best=1.13 mean=0.89 raw_best=10.35m mean_vy=476 sigma=0.309 best_ever=1.68 (1.0s)
+gen 26: best=0.76 mean=0.66 raw_best=9.81m mean_vy=418 sigma=0.307 best_ever=1.68 (0.9s)
+gen 27: best=0.69 mean=0.62 raw_best=9.81m mean_vy=429 sigma=0.306 best_ever=1.68 (0.9s)
+gen 28: best=0.95 mean=0.71 raw_best=9.81m mean_vy=493 sigma=0.304 best_ever=1.68 (1.0s)
+gen 29: stagnation -> sigma 0.395
+gen 29: best=1.61 mean=0.98 raw_best=10.44m mean_vy=502 sigma=0.393 best_ever=1.68 (0.9s)
+gen 30: best=1.61 mean=0.96 raw_best=10.45m mean_vy=549 sigma=0.391 best_ever=1.68 (0.9s)
+gen 31: best=1.23 mean=0.86 raw_best=10.45m mean_vy=581 sigma=0.390 best_ever=1.68 (1.0s)
+gen 32: best=1.61 mean=0.91 raw_best=10.44m mean_vy=532 sigma=0.388 best_ever=1.68 (0.9s)
+gen 33: best=1.57 mean=1.12 raw_best=10.45m mean_vy=471 sigma=0.386 best_ever=1.68 (1.0s)
+gen 34: best=0.83 mean=0.74 raw_best=9.81m mean_vy=393 sigma=0.384 best_ever=1.68 (0.9s)
+gen 35: best=0.83 mean=0.74 raw_best=9.81m mean_vy=393 sigma=0.382 best_ever=1.68 (0.8s)
+gen 36: best=0.76 mean=0.64 raw_best=9.81m mean_vy=427 sigma=0.380 best_ever=1.68 (0.9s)
+gen 37: best=0.98 mean=0.75 raw_best=9.81m mean_vy=446 sigma=0.378 best_ever=1.68 (0.9s)
+gen 38: best=0.69 mean=0.66 raw_best=9.81m mean_vy=411 sigma=0.376 best_ever=1.68 (0.9s)
+gen 39: best=0.96 mean=0.87 raw_best=9.81m mean_vy=361 sigma=0.374 best_ever=1.68 (0.8s)
+gen 40: best=0.76 mean=0.65 raw_best=9.81m mean_vy=413 sigma=0.372 best_ever=1.68 (0.9s)
+gen 41: best=0.83 mean=0.74 raw_best=9.81m mean_vy=391 sigma=0.370 best_ever=1.68 (0.8s)
+gen 42: best=0.83 mean=0.78 raw_best=9.81m mean_vy=384 sigma=0.369 best_ever=1.68 (0.9s)
+gen 43: best=0.69 mean=0.64 raw_best=9.81m mean_vy=417 sigma=0.367 best_ever=1.68 (0.9s)
+gen 44: stagnation -> sigma 0.477
+gen 44: best=1.04 mean=0.85 raw_best=9.81m mean_vy=441 sigma=0.474 best_ever=1.68 (1.0s)
+gen 45: best=1.04 mean=0.96 raw_best=9.81m mean_vy=453 sigma=0.472 best_ever=1.68 (1.0s)
+gen 46: best=0.63 mean=0.61 raw_best=9.81m mean_vy=440 sigma=0.470 best_ever=1.68 (0.9s)
+gen 47: best=0.69 mean=0.63 raw_best=9.81m mean_vy=420 sigma=0.467 best_ever=1.68 (0.9s)
+gen 48: best=1.56 mean=0.91 raw_best=10.45m mean_vy=507 sigma=0.465 best_ever=1.68 (0.9s)
+gen 49: best=1.56 mean=0.91 raw_best=10.45m mean_vy=489 sigma=0.463 best_ever=1.68 (0.9s)
+gen 50: best=1.62 mean=0.94 raw_best=10.44m mean_vy=527 sigma=0.460 best_ever=1.68 (0.9s)
+gen 51: best=1.62 mean=1.05 raw_best=10.45m mean_vy=533 sigma=0.458 best_ever=1.68 (0.9s)
+gen 52: best=1.62 mean=1.06 raw_best=10.45m mean_vy=524 sigma=0.456 best_ever=1.68 (0.9s)
+gen 53: best=1.62 mean=1.05 raw_best=10.45m mean_vy=503 sigma=0.454 best_ever=1.68 (1.0s)
+gen 54: best=0.69 mean=0.65 raw_best=9.81m mean_vy=417 sigma=0.451 best_ever=1.68 (0.8s)
+gen 55: best=0.89 mean=0.78 raw_best=9.81m mean_vy=382 sigma=0.449 best_ever=1.68 (0.9s)
+gen 56: best=0.76 mean=0.68 raw_best=9.81m mean_vy=407 sigma=0.447 best_ever=1.68 (0.9s)
+gen 57: best=0.61 mean=0.61 raw_best=9.81m mean_vy=466 sigma=0.444 best_ever=1.68 (1.0s)
+gen 58: best=0.83 mean=0.66 raw_best=9.81m mean_vy=421 sigma=0.442 best_ever=1.68 (0.9s)
+gen 59: stagnation -> sigma 0.575
+gen 59: best=0.83 mean=0.70 raw_best=9.81m mean_vy=400 sigma=0.572 best_ever=1.68 (0.9s)
+gen 60: best=0.83 mean=0.72 raw_best=9.81m mean_vy=398 sigma=0.569 best_ever=1.68 (0.9s)
+gen 61: best=0.83 mean=0.74 raw_best=9.81m mean_vy=393 sigma=0.566 best_ever=1.68 (0.9s)
+gen 62: best=0.83 mean=0.69 raw_best=9.81m mean_vy=406 sigma=0.564 best_ever=1.68 (0.9s)
+gen 63: best=0.76 mean=0.69 raw_best=9.81m mean_vy=406 sigma=0.561 best_ever=1.68 (0.9s)
+gen 64: best=0.76 mean=0.65 raw_best=9.81m mean_vy=429 sigma=0.558 best_ever=1.68 (0.9s)
+gen 65: best=0.96 mean=0.83 raw_best=9.81m mean_vy=372 sigma=0.555 best_ever=1.68 (0.9s)
+gen 66: best=0.69 mean=0.63 raw_best=9.81m mean_vy=421 sigma=0.552 best_ever=1.68 (0.9s)
+gen 67: best=1.03 mean=0.87 raw_best=9.81m mean_vy=361 sigma=0.550 best_ever=1.68 (0.9s)
+gen 68: best=0.89 mean=0.76 raw_best=9.81m mean_vy=390 sigma=0.547 best_ever=1.68 (0.9s)
+gen 69: best=0.89 mean=0.85 raw_best=9.81m mean_vy=367 sigma=0.544 best_ever=1.68 (0.9s)
+gen 70: best=0.76 mean=0.65 raw_best=9.81m mean_vy=416 sigma=0.541 best_ever=1.68 (1.0s)
+gen 71: best=1.11 mean=0.92 raw_best=9.81m mean_vy=480 sigma=0.539 best_ever=1.68 (1.0s)
+gen 72: best=1.30 mean=0.89 raw_best=10.45m mean_vy=573 sigma=0.536 best_ever=1.68 (0.9s)
+gen 73: best=1.25 mean=0.90 raw_best=10.45m mean_vy=524 sigma=0.533 best_ever=1.68 (0.9s)
+gen 74: stagnation -> sigma 0.600
+gen 74: best=1.25 mean=0.91 raw_best=10.45m mean_vy=545 sigma=0.597 best_ever=1.68 (0.9s)
+gen 75: best=1.25 mean=0.92 raw_best=10.45m mean_vy=528 sigma=0.594 best_ever=1.68 (0.9s)
+gen 76: best=1.25 mean=0.90 raw_best=10.44m mean_vy=512 sigma=0.591 best_ever=1.68 (0.9s)
+gen 77: best=1.25 mean=0.93 raw_best=10.45m mean_vy=531 sigma=0.588 best_ever=1.68 (0.9s)
+gen 78: best=1.27 mean=0.84 raw_best=10.35m mean_vy=561 sigma=0.585 best_ever=1.68 (1.0s)
+gen 79: best=0.94 mean=0.85 raw_best=10.45m mean_vy=575 sigma=0.582 best_ever=1.68 (0.9s)
+gen 80: best=0.94 mean=0.83 raw_best=10.45m mean_vy=576 sigma=0.579 best_ever=1.68 (0.9s)
+gen 81: best=1.62 mean=1.01 raw_best=10.44m mean_vy=541 sigma=0.576 best_ever=1.68 (1.0s)
+gen 82: best=1.62 mean=0.99 raw_best=10.44m mean_vy=549 sigma=0.574 best_ever=1.68 (0.9s)
+gen 83: best=1.62 mean=1.01 raw_best=10.44m mean_vy=503 sigma=0.571 best_ever=1.68 (0.9s)
+gen 84: best=1.62 mean=1.06 raw_best=10.45m mean_vy=514 sigma=0.568 best_ever=1.68 (1.0s)
+gen 85: best=1.47 mean=0.95 raw_best=10.35m mean_vy=558 sigma=0.565 best_ever=1.68 (1.0s)
+gen 86: best=0.98 mean=0.86 raw_best=10.45m mean_vy=495 sigma=0.562 best_ever=1.68 (0.9s)
+gen 87: best=1.45 mean=0.89 raw_best=10.44m mean_vy=521 sigma=0.559 best_ever=1.68 (0.9s)
+gen 88: best=1.18 mean=0.90 raw_best=10.45m mean_vy=497 sigma=0.557 best_ever=1.68 (0.9s)
+gen 89: stagnation -> sigma 0.600
+gen 89: best=1.19 mean=0.90 raw_best=10.44m mean_vy=456 sigma=0.597 best_ever=1.68 (0.9s)
+gen 90: best=1.37 mean=1.00 raw_best=10.45m mean_vy=523 sigma=0.594 best_ever=1.68 (0.9s)
+gen 91: best=1.27 mean=0.76 raw_best=10.35m mean_vy=470 sigma=0.591 best_ever=1.68 (0.9s)
+gen 92: best=1.40 mean=0.86 raw_best=10.45m mean_vy=540 sigma=0.588 best_ever=1.68 (0.9s)
+gen 93: best=1.40 mean=0.90 raw_best=10.45m mean_vy=564 sigma=0.585 best_ever=1.68 (0.9s)
+gen 94: best=1.34 mean=0.89 raw_best=10.45m mean_vy=545 sigma=0.582 best_ever=1.68 (0.9s)
+gen 95: best=1.33 mean=0.88 raw_best=10.35m mean_vy=594 sigma=0.579 best_ever=1.68 (1.0s)
+gen 96: best=1.31 mean=0.92 raw_best=10.45m mean_vy=519 sigma=0.576 best_ever=1.68 (0.9s)
+gen 97: best=1.23 mean=0.83 raw_best=10.35m mean_vy=538 sigma=0.574 best_ever=1.68 (1.0s)
+gen 98: best=1.60 mean=0.93 raw_best=10.44m mean_vy=494 sigma=0.571 best_ever=1.68 (0.9s)
+gen 99: best=1.65 mean=0.91 raw_best=10.44m mean_vy=578 sigma=0.568 best_ever=1.68 (0.9s)
+gen 100: best=1.65 mean=0.95 raw_best=10.44m mean_vy=546 sigma=0.565 best_ever=1.68 (0.9s)
+gen 101: best=1.57 mean=1.06 raw_best=10.44m mean_vy=501 sigma=0.562 best_ever=1.68 (0.9s)
+gen 102: best=1.65 mean=0.99 raw_best=10.44m mean_vy=524 sigma=0.559 best_ever=1.68 (0.9s)
+gen 103: best=1.04 mean=0.86 raw_best=9.81m mean_vy=383 sigma=0.557 best_ever=1.68 (0.9s)
+gen 104: stagnation -> sigma 0.600
+gen 104: best=0.69 mean=0.54 raw_best=9.81m mean_vy=444 sigma=0.597 best_ever=1.68 (78.5s)
+warn: respawn lane 0 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 1 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 2 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 3 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 4 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 5 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 6 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 7 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 17 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 18 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 19 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 20 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+gen 105: best=0.00 mean=0.00 raw_best=0.00m mean_vy=0 sigma=0.594 best_ever=1.68 (121.6s)
+warn: respawn lane 0 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 1 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 2 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 3 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 4 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 5 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 6 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 7 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 17 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 18 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 19 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 20 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+gen 106: best=0.00 mean=0.00 raw_best=0.00m mean_vy=0 sigma=0.591 best_ever=1.68 (121.7s)
+warn: respawn lane 0 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 1 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 2 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 3 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 4 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 5 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 6 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 7 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 17 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 18 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 19 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 20 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+gen 107: best=0.00 mean=0.00 raw_best=0.00m mean_vy=0 sigma=0.588 best_ever=1.68 (121.9s)
+warn: respawn lane 0 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 1 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 2 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 3 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 4 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 5 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 6 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 7 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 17 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 18 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 19 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+warn: respawn lane 20 failed: <urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>
+FATAL: too many API errors - is the game closed?
