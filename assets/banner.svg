@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1573 512" role="img" aria-label="rocket landing banner">
+<title>rocket landing</title>
+<style>
+.draw{stroke-dasharray:1;stroke-dashoffset:0;animation:draw .9s cubic-bezier(.65,0,.35,1) backwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.38s}.d3{animation-delay:.52s}.d4{animation-delay:.64s}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.word{animation:rise .7s .78s cubic-bezier(.22,1,.36,1) backwards}
+.sub{animation:rise .7s .94s cubic-bezier(.22,1,.36,1) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion: reduce){.draw,.word,.sub{animation:none}}
+</style>
+<rect width="1573" height="512" fill="#000000"/>
+<g transform="translate(256 262) scale(4.6) translate(-32 -32)" stroke="#FFFFFF" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+<path class="draw d1" pathLength="1" d="M32 8.5 C 38.6 19.5 38.6 30.5 32 40.5 C 25.4 30.5 25.4 19.5 32 8.5 Z"/>
+<circle class="draw d2" pathLength="1" cx="32" cy="22.4" r="2.7"/>
+<path class="draw d3" pathLength="1" d="M26.4 28.6 L19.8 40.6 M37.6 28.6 L44.2 40.6"/>
+<path class="draw d4" pathLength="1" d="M32 45.5 L27.6 57 M32 48 L32 60.5 M32 45.5 L36.4 57"/>
+</g>
+<text class="word" x="560" y="252" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'JetBrains Mono',monospace" font-size="104" font-weight="500" fill="#FFFFFF" letter-spacing="1">rocket landing</text>
+<text class="sub" x="560" y="336" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'JetBrains Mono',monospace" font-size="34" font-weight="400" fill="#8B8B8B">deterministic cave descent</text>
+</svg>

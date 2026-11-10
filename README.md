@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="rocket landing" width="560">
+</p>
+
+
 # Rocket Landing
 
 Аркада на Godot 4: ракета падает по бесконечной процедурной пещере.
