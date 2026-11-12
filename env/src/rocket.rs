@@ -57,28 +57,47 @@ pub fn point_in_corridor(px: f64, py: f64) -> bool {
 }
 
 /// True if any part of the rocket overlaps the rock (= dead by game rules).
+/// Points sampled exactly like the game's `cave.gd::_obb_outside_corridor`
+/// (production kill check since the analytic-collision rewrite): 4 corners
+/// + 4 quarter-points (a ∈ {0.25, 0.5, 0.75}) on every edge, i.e. 16 points.
+/// Any point outside the corridor ⇒ death. Keep in sync with game/cave.gd.
 #[inline]
 pub fn rocket_intersects_rock(x: f64, y: f64, angle: f64) -> bool {
-    // Godot tas_search.gd checks 3x3 grid of OBB points (corners + edge midpoints);
-    // this is much more lenient than dense edge sampling — same as production TAS.
-    const OFFS: [(f64, f64); 9] = [
-        (-BODY_W / 2.0, BODY_OFF_Y - BODY_H / 2.0),
-        (0.0,                       BODY_OFF_Y - BODY_H / 2.0),
-        ( BODY_W / 2.0, BODY_OFF_Y - BODY_H / 2.0),
-        (-BODY_W / 2.0, BODY_OFF_Y),
-        (0.0,                       BODY_OFF_Y),
-        ( BODY_W / 2.0, BODY_OFF_Y),
-        (-BODY_W / 2.0, BODY_OFF_Y + BODY_H / 2.0),
-        (0.0,                       BODY_OFF_Y + BODY_H / 2.0),
-        ( BODY_W / 2.0, BODY_OFF_Y + BODY_H / 2.0),
-    ];
     let c = angle.cos();
     let s = angle.sin();
-    for &(lx, ly) in &OFFS {
-        let px = x + lx * c - ly * s;
-        let py = y + lx * s + ly * c;
-        if !point_in_corridor(px, py) {
-            return true;
+    let hw = BODY_W / 2.0;
+    let hh = BODY_H / 2.0;
+    // local basis vectors (axes), world space
+    let ux = hw * c;
+    let uy = hw * s;
+    let vx = -hh * s;
+    let vy = hh * c;
+    // center in world space: pos + rotate((0, BODY_OFF_Y), angle)
+    let ccx = x + (0.0 * c - BODY_OFF_Y * s);
+    let ccy = y + (0.0 * s + BODY_OFF_Y * c);
+
+    // 4 corners
+    for &su in &[-1.0f64, 1.0] {
+        for &sv in &[-1.0f64, 1.0] {
+            let px = ccx + su * ux + sv * vx;
+            let py = ccy + su * uy + sv * vy;
+            if !point_in_corridor(px, py) {
+                return true;
+            }
+        }
+    }
+    // quarter-points along every edge (a ∈ {-0.5, 0, 0.5} in units of half-axis)
+    for &a in &[-0.5f64, 0.0, 0.5] {
+        let samples = [
+            (ccx + ux + vx * a, ccy + uy + vy * a),
+            (ccx - ux + vx * a, ccy - uy + vy * a),
+            (ccx + ux * a + vx, ccy + uy * a + vy),
+            (ccx + ux * a - vx, ccy + uy * a - vy),
+        ];
+        for &(px, py) in &samples {
+            if !point_in_corridor(px, py) {
+                return true;
+            }
         }
     }
     false

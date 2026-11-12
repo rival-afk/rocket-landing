@@ -7,3 +7,7 @@ env/**/build/
 # Godot artifacts
 .godot/
 *.tmp
+
+# Отладочно-релизные артефакты сборки (хранятся в GitHub Releases, не в git)
+game/build/
+

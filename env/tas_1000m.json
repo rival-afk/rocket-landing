@@ -1,0 +1,2868 @@
+{
+  "created": "rust-fly",
+  "engine": "rust-env",
+  "final_depth_m": 25.05401343352608,
+  "inputs": [
+    {
+      "thrust": false,
+      "torque": -0.5124587499163133
+    },
+    {
+      "thrust": false,
+      "torque": -0.40494467049681726
+    },
+    {
+      "thrust": false,
+      "torque": -0.31997491781209525
+    },
+    {
+      "thrust": false,
+      "torque": -0.25282393135856446
+    },
+    {
+      "thrust": false,
+      "torque": -0.19975931247494527
+    },
+    {
+      "thrust": false,
+      "torque": -0.14919866959385059
+    },
+    {
+      "thrust": false,
+      "torque": -0.03534929941953826
+    },
+    {
+      "thrust": false,
+      "torque": 0.03136512837121681
+    },
+    {
+      "thrust": false,
+      "torque": 0.06940096015042085
+    },
+    {
+      "thrust": false,
+      "torque": 0.0895990542190846
+    },
+    {
+      "thrust": false,
+      "torque": -0.002529620315337766
+    },
+    {
+      "thrust": false,
+      "torque": 0.029672529631579094
+    },
+    {
+      "thrust": true,
+      "torque": 0.04982524320776141
+    },
+    {
+      "thrust": true,
+      "torque": 0.043856026736032
+    },
+    {
+      "thrust": false,
+      "torque": 0.03795707943145885
+    },
+    {
+      "thrust": true,
+      "torque": 0.04791156734321392
+    },
+    {
+      "thrust": true,
+      "torque": 0.04132359562530357
+    },
+    {
+      "thrust": true,
+      "torque": 0.038433786597736844
+    },
+    {
+      "thrust": true,
+      "torque": 0.04805380967402822
+    },
+    {
+      "thrust": true,
+      "torque": 0.058126989490652474
+    },
+    {
+      "thrust": true,
+      "torque": 0.06876362477070207
+    },
+    {
+      "thrust": false,
+      "torque": 0.08008523531949668
+    },
+    {
+      "thrust": true,
+      "torque": 0.09480326201457599
+    },
+    {
+      "thrust": true,
+      "torque": 0.10157538836263683
+    },
+    {
+      "thrust": false,
+      "torque": 0.1094108183169785
+    },
+    {
+      "thrust": true,
+      "torque": 0.11131987652044602
+    },
+    {
+      "thrust": true,
+      "torque": 0.1162775195114561
+    },
+    {
+      "thrust": false,
+      "torque": 0.1222645731329032
+    },
+    {
+      "thrust": true,
+      "torque": 0.11448766839871626
+    },
+    {
+      "thrust": false,
+      "torque": 0.11877515258399832
+    },
+    {
+      "thrust": true,
+      "torque": 0.10703706294753867
+    },
+    {
+      "thrust": true,
+      "torque": 0.1105399925680328
+    },
+    {
+      "thrust": false,
+      "torque": 0.11450734788781243
+    },
+    {
+      "thrust": true,
+      "torque": 0.09759401220401794
+    },
+    {
+      "thrust": true,
+      "torque": 0.10138788846629959
+    },
+    {
+      "thrust": false,
+      "torque": 0.10522507840233886
+    },
+    {
+      "thrust": true,
+      "torque": 0.0845082667282131
+    },
+    {
+      "thrust": true,
+      "torque": 0.0886616787815348
+    },
+    {
+      "thrust": false,
+      "torque": 0.09242728160143206
+    },
+    {
+      "thrust": true,
+      "torque": 0.06914742459393812
+    },
+    {
+      "thrust": true,
+      "torque": 0.07362942721782938
+    },
+    {
+      "thrust": false,
+      "torque": 0.07731262951142692
+    },
+    {
+      "thrust": true,
+      "torque": 0.0526034602788964
+    },
+    {
+      "thrust": false,
+      "torque": 0.05733027565154143
+    },
+    {
+      "thrust": true,
+      "torque": 0.03623442355693265
+    },
+    {
+      "thrust": true,
+      "torque": 0.04177545802244063
+    },
+    {
+      "thrust": false,
+      "torque": 0.045876351581478805
+    },
+    {
+      "thrust": true,
+      "torque": 0.02397108817812943
+    },
+    {
+      "thrust": true,
+      "torque": 0.029241842729082635
+    },
+    {
+      "thrust": false,
+      "torque": 0.03287475956424717
+    },
+    {
+      "thrust": true,
+      "torque": 0.011163830077231963
+    },
+    {
+      "thrust": true,
+      "torque": 0.016210711953346026
+    },
+    {
+      "thrust": false,
+      "torque": 0.019446138754635724
+    },
+    {
+      "thrust": true,
+      "torque": -0.0012776554970310716
+    },
+    {
+      "thrust": true,
+      "torque": 0.003532347841529715
+    },
+    {
+      "thrust": false,
+      "torque": 0.006393771516443315
+    },
+    {
+      "thrust": true,
+      "torque": -0.012722289311451009
+    },
+    {
+      "thrust": false,
+      "torque": -0.008191104675352223
+    },
+    {
+      "thrust": true,
+      "torque": -0.022291965792370496
+    },
+    {
+      "thrust": true,
+      "torque": -0.016730848974834702
+    },
+    {
+      "thrust": false,
+      "torque": -0.013292843031938784
+    },
+    {
+      "thrust": true,
+      "torque": -0.026687158740686414
+    },
+    {
+      "thrust": true,
+      "torque": -0.008877466794296884
+    },
+    {
+      "thrust": false,
+      "torque": 0.008492223320792247
+    },
+    {
+      "thrust": true,
+      "torque": 0.004512047516692874
+    },
+    {
+      "thrust": true,
+      "torque": 0.02021306887682961
+    },
+    {
+      "thrust": false,
+      "torque": 0.03233745586902237
+    },
+    {
+      "thrust": true,
+      "torque": 0.019284451669422255
+    },
+    {
+      "thrust": true,
+      "torque": 0.03157674126496355
+    },
+    {
+      "thrust": false,
+      "torque": 0.040529153653466925
+    },
+    {
+      "thrust": true,
+      "torque": 0.02201455125036267
+    },
+    {
+      "thrust": true,
+      "torque": 0.0323317829791133
+    },
+    {
+      "thrust": false,
+      "torque": 0.03705035495975815
+    },
+    {
+      "thrust": true,
+      "torque": 0.003823877198667081
+    },
+    {
+      "thrust": false,
+      "torque": 0.0025311697517742095
+    },
+    {
+      "thrust": true,
+      "torque": -0.01941181318168015
+    },
+    {
+      "thrust": true,
+      "torque": -0.01688688311294082
+    },
+    {
+      "thrust": false,
+      "torque": -0.01675472646277485
+    },
+    {
+      "thrust": true,
+      "torque": -0.0336478082089676
+    },
+    {
+      "thrust": true,
+      "torque": -0.030253153064684037
+    },
+    {
+      "thrust": false,
+      "torque": -0.029454408996376948
+    },
+    {
+      "thrust": true,
+      "torque": -0.04224604667492651
+    },
+    {
+      "thrust": true,
+      "torque": -0.03854575540760017
+    },
+    {
+      "thrust": false,
+      "torque": -0.03752377293268072
+    },
+    {
+      "thrust": true,
+      "torque": -0.046849756296329086
+    },
+    {
+      "thrust": true,
+      "torque": -0.043173922072802066
+    },
+    {
+      "thrust": false,
+      "torque": -0.04218174396513628
+    },
+    {
+      "thrust": true,
+      "torque": -0.0485151091295746
+    },
+    {
+      "thrust": false,
+      "torque": -0.04504908388635183
+    },
+    {
+      "thrust": true,
+      "torque": -0.04708491089509186
+    },
+    {
+      "thrust": true,
+      "torque": -0.042095885908294474
+    },
+    {
+      "thrust": false,
+      "torque": -0.03969999973146248
+    },
+    {
+      "thrust": true,
+      "torque": -0.041302711926744576
+    },
+    {
+      "thrust": true,
+      "torque": -0.03719683610955393
+    },
+    {
+      "thrust": false,
+      "torque": -0.035534809361827645
+    },
+    {
+      "thrust": true,
+      "torque": -0.03646230196667184
+    },
+    {
+      "thrust": true,
+      "torque": -0.03298839064410899
+    },
+    {
+      "thrust": false,
+      "torque": -0.03184998497926585
+    },
+    {
+      "thrust": true,
+      "torque": -0.032043487131279004
+    },
+    {
+      "thrust": true,
+      "torque": -0.029037758553433303
+    },
+    {
+      "thrust": false,
+      "torque": -0.028287127276046445
+    },
+    {
+      "thrust": false,
+      "torque": -0.027797702626089528
+    },
+    {
+      "thrust": false,
+      "torque": -0.02361256781189285
+    },
+    {
+      "thrust": true,
+      "torque": -0.01740323053078533
+    },
+    {
+      "thrust": false,
+      "torque": -0.010089978833713898
+    },
+    {
+      "thrust": true,
+      "torque": -0.005673629817693926
+    },
+    {
+      "thrust": false,
+      "torque": 0.0013009727947016936
+    },
+    {
+      "thrust": true,
+      "torque": 0.004143396150743062
+    },
+    {
+      "thrust": true,
+      "torque": 0.010932241326323533
+    },
+    {
+      "thrust": false,
+      "torque": 0.01575296012381373
+    },
+    {
+      "thrust": true,
+      "torque": 0.014653670072553183
+    },
+    {
+      "thrust": true,
+      "torque": 0.02013547843396021
+    },
+    {
+      "thrust": false,
+      "torque": 0.02478834085290679
+    },
+    {
+      "thrust": true,
+      "torque": 0.02437123766279763
+    },
+    {
+      "thrust": true,
+      "torque": 0.032219784808835895
+    },
+    {
+      "thrust": false,
+      "torque": 0.03771352026955499
+    },
+    {
+      "thrust": true,
+      "torque": 0.03249512020150247
+    },
+    {
+      "thrust": true,
+      "torque": 0.02355519129646244
+    },
+    {
+      "thrust": false,
+      "torque": 0.011293338714071455
+    },
+    {
+      "thrust": true,
+      "torque": -0.006767213418272688
+    },
+    {
+      "thrust": false,
+      "torque": -0.013379670751996909
+    },
+    {
+      "thrust": true,
+      "torque": -0.023191444910236038
+    },
+    {
+      "thrust": true,
+      "torque": -0.026098691191542258
+    },
+    {
+      "thrust": false,
+      "torque": -0.029903260451450323
+    },
+    {
+      "thrust": true,
+      "torque": -0.034283245480874185
+    },
+    {
+      "thrust": true,
+      "torque": -0.035459592588904
+    },
+    {
+      "thrust": false,
+      "torque": -0.03777268943384874
+    },
+    {
+      "thrust": true,
+      "torque": -0.03846840319702204
+    },
+    {
+      "thrust": true,
+      "torque": -0.0388056841935604
+    },
+    {
+      "thrust": false,
+      "torque": -0.04035931575769638
+    },
+    {
+      "thrust": true,
+      "torque": -0.03847235480927664
+    },
+    {
+      "thrust": true,
+      "torque": -0.038456926210566414
+    },
+    {
+      "thrust": false,
+      "torque": -0.03965122612347416
+    },
+    {
+      "thrust": true,
+      "torque": -0.03592069221179163
+    },
+    {
+      "thrust": false,
+      "torque": -0.03580741250957497
+    },
+    {
+      "thrust": true,
+      "torque": -0.030756278958656225
+    },
+    {
+      "thrust": true,
+      "torque": -0.029839516574403153
+    },
+    {
+      "thrust": false,
+      "torque": -0.030053693271093796
+    },
+    {
+      "thrust": true,
+      "torque": -0.024734531404168217
+    },
+    {
+      "thrust": true,
+      "torque": -0.024122301678780964
+    },
+    {
+      "thrust": false,
+      "torque": -0.024547436219844756
+    },
+    {
+      "thrust": true,
+      "torque": -0.01905827208007757
+    },
+    {
+      "thrust": true,
+      "torque": -0.01864842088908876
+    },
+    {
+      "thrust": false,
+      "torque": -0.01920748755915294
+    },
+    {
+      "thrust": true,
+      "torque": -0.013683562737116595
+    },
+    {
+      "thrust": false,
+      "torque": -0.013401091805657062
+    },
+    {
+      "thrust": true,
+      "torque": -0.007807857686540659
+    },
+    {
+      "thrust": true,
+      "torque": -0.0069577042995290165
+    },
+    {
+      "thrust": false,
+      "torque": -0.007014604525000041
+    },
+    {
+      "thrust": true,
+      "torque": -0.0021559309027058718
+    },
+    {
+      "thrust": true,
+      "torque": -0.0015155654774667738
+    },
+    {
+      "thrust": false,
+      "torque": -0.0017508090957346345
+    },
+    {
+      "thrust": true,
+      "torque": -0.017310109058211922
+    },
+    {
+      "thrust": true,
+      "torque": -0.03988551665722835
+    },
+    {
+      "thrust": false,
+      "torque": -0.05989392332519153
+    },
+    {
+      "thrust": true,
+      "torque": -0.06397459462318285
+    },
+    {
+      "thrust": true,
+      "torque": -0.07873683216597598
+    },
+    {
+      "thrust": false,
+      "torque": -0.09193718805261392
+    },
+    {
+      "thrust": true,
+      "torque": -0.08308089337128731
+    },
+    {
+      "thrust": false,
+      "torque": -0.09370604418395512
+    },
+    {
+      "thrust": true,
+      "torque": -0.07843432111192428
+    },
+    {
+      "thrust": true,
+      "torque": -0.08202045758055508
+    },
+    {
+      "thrust": false,
+      "torque": -0.08526295799590566
+    },
+    {
+      "thrust": true,
+      "torque": -0.06411909355466985
+    },
+    {
+      "thrust": true,
+      "torque": -0.06829742471864875
+    },
+    {
+      "thrust": false,
+      "torque": -0.07179351983581826
+    },
+    {
+      "thrust": true,
+      "torque": -0.04978867058651657
+    },
+    {
+      "thrust": true,
+      "torque": -0.054374983653840664
+    },
+    {
+      "thrust": false,
+      "torque": -0.05799125073314651
+    },
+    {
+      "thrust": true,
+      "torque": -0.04371408708923768
+    },
+    {
+      "thrust": true,
+      "torque": -0.04257210259209243
+    },
+    {
+      "thrust": true,
+      "torque": -0.041181500556096845
+    },
+    {
+      "thrust": true,
+      "torque": -0.039500011273084695
+    },
+    {
+      "thrust": true,
+      "torque": -0.03747923014072514
+    },
+    {
+      "thrust": false,
+      "torque": -0.035062499802817414
+    },
+    {
+      "thrust": true,
+      "torque": -0.0037258995054221256
+    },
+    {
+      "thrust": true,
+      "torque": -0.005113353949964328
+    },
+    {
+      "thrust": false,
+      "torque": -0.005476467464688862
+    },
+    {
+      "thrust": true,
+      "torque": 0.0194662453884948
+    },
+    {
+      "thrust": true,
+      "torque": 0.01623613982380867
+    },
+    {
+      "thrust": false,
+      "torque": 0.014373031872230248
+    },
+    {
+      "thrust": true,
+      "torque": 0.03439110860724677
+    },
+    {
+      "thrust": false,
+      "torque": 0.03027724584460567
+    },
+    {
+      "thrust": true,
+      "torque": 0.04419159979655545
+    },
+    {
+      "thrust": true,
+      "torque": 0.0387676206737905
+    },
+    {
+      "thrust": false,
+      "torque": 0.03499002167908718
+    },
+    {
+      "thrust": true,
+      "torque": 0.04677835141073583
+    },
+    {
+      "thrust": true,
+      "torque": 0.04180133018297427
+    },
+    {
+      "thrust": false,
+      "torque": 0.03839070373615843
+    },
+    {
+      "thrust": true,
+      "torque": 0.04809231998557291
+    },
+    {
+      "thrust": true,
+      "torque": 0.04359623123936798
+    },
+    {
+      "thrust": false,
+      "torque": 0.040569917810409355
+    },
+    {
+      "thrust": true,
+      "torque": 0.04825706319777097
+    },
+    {
+      "thrust": true,
+      "torque": 0.04426040865693104
+    },
+    {
+      "thrust": false,
+      "torque": 0.041624243188153165
+    },
+    {
+      "thrust": true,
+      "torque": 0.047400133338986676
+    },
+    {
+      "thrust": false,
+      "torque": 0.0439077279323965
+    },
+    {
+      "thrust": true,
+      "torque": 0.046930877654783945
+    },
+    {
+      "thrust": true,
+      "torque": 0.041474420653961896
+    },
+    {
+      "thrust": false,
+      "torque": 0.03554206356835463
+    },
+    {
+      "thrust": true,
+      "torque": 0.035787846638049216
+    },
+    {
+      "thrust": true,
+      "torque": 0.030280549004937176
+    },
+    {
+      "thrust": false,
+      "torque": 0.026192817541439897
+    },
+    {
+      "thrust": true,
+      "torque": 0.029249304342119888
+    },
+    {
+      "thrust": true,
+      "torque": 0.03131299342203734
+    },
+    {
+      "thrust": false,
+      "torque": -0.03395942061839452
+    },
+    {
+      "thrust": true,
+      "torque": -0.006944454025385372
+    },
+    {
+      "thrust": true,
+      "torque": 0.002907959731342347
+    },
+    {
+      "thrust": false,
+      "torque": 0.012225779861473753
+    },
+    {
+      "thrust": true,
+      "torque": 0.026776070494745674
+    },
+    {
+      "thrust": false,
+      "torque": 0.03235191722521241
+    },
+    {
+      "thrust": true,
+      "torque": 0.039674104987961346
+    },
+    {
+      "thrust": true,
+      "torque": 0.04283018561322565
+    },
+    {
+      "thrust": false,
+      "torque": 0.04627036414190361
+    },
+    {
+      "thrust": true,
+      "torque": 0.04778576578444725
+    },
+    {
+      "thrust": true,
+      "torque": 0.049726658967497256
+    },
+    {
+      "thrust": false,
+      "torque": 0.052022408846240535
+    },
+    {
+      "thrust": true,
+      "torque": 0.04937490851435399
+    },
+    {
+      "thrust": true,
+      "torque": 0.05077854428982814
+    },
+    {
+      "thrust": false,
+      "torque": 0.052481091940250135
+    },
+    {
+      "thrust": true,
+      "torque": 0.04682400802608344
+    },
+    {
+      "thrust": true,
+      "torque": 0.04805198274978855
+    },
+    {
+      "thrust": true,
+      "torque": 0.04945670412828873
+    },
+    {
+      "thrust": false,
+      "torque": 0.05102210506874547
+    },
+    {
+      "thrust": true,
+      "torque": 0.041706966482608826
+    },
+    {
+      "thrust": true,
+      "torque": 0.04312981384345549
+    },
+    {
+      "thrust": false,
+      "torque": 0.044538631028256004
+    },
+    {
+      "thrust": true,
+      "torque": 0.033881828574011306
+    },
+    {
+      "thrust": false,
+      "torque": 0.035370022513619426
+    },
+    {
+      "thrust": true,
+      "torque": 0.025674226923417864
+    },
+    {
+      "thrust": true,
+      "torque": 0.027282770859332076
+    },
+    {
+      "thrust": false,
+      "torque": 0.028570306259172076
+    },
+    {
+      "thrust": true,
+      "torque": 0.01837928008114138
+    },
+    {
+      "thrust": true,
+      "torque": 0.019943511628291135
+    },
+    {
+      "thrust": false,
+      "torque": 0.02107514760762219
+    },
+    {
+      "thrust": true,
+      "torque": 0.01090390707454727
+    },
+    {
+      "thrust": false,
+      "torque": 0.012417878358749003
+    },
+    {
+      "thrust": true,
+      "torque": 0.004038774210704677
+    },
+    {
+      "thrust": true,
+      "torque": 0.005798243392957403
+    },
+    {
+      "thrust": false,
+      "torque": 0.006956386001959958
+    },
+    {
+      "thrust": true,
+      "torque": -0.0011924254282105863
+    },
+    {
+      "thrust": false,
+      "torque": 0.00031886153493609903
+    },
+    {
+      "thrust": true,
+      "torque": -0.006137105997766346
+    },
+    {
+      "thrust": true,
+      "torque": -0.004437343290595109
+    },
+    {
+      "thrust": false,
+      "torque": -0.003389949255320357
+    },
+    {
+      "thrust": true,
+      "torque": -0.009494791560579264
+    },
+    {
+      "thrust": true,
+      "torque": 0.0009357123261363731
+    },
+    {
+      "thrust": false,
+      "torque": -0.004322153739732893
+    },
+    {
+      "thrust": true,
+      "torque": -0.00239172923307045
+    },
+    {
+      "thrust": true,
+      "torque": 0.005592753966473074
+    },
+    {
+      "thrust": false,
+      "torque": 0.012044437605190583
+    },
+    {
+      "thrust": true,
+      "torque": 0.008363878138163817
+    },
+    {
+      "thrust": true,
+      "torque": 0.014068140032816335
+    },
+    {
+      "thrust": false,
+      "torque": 0.01850685953026643
+    },
+    {
+      "thrust": true,
+      "torque": 0.011467425467713111
+    },
+    {
+      "thrust": false,
+      "torque": 0.015887628834251256
+    },
+    {
+      "thrust": true,
+      "torque": 0.005010748986086999
+    },
+    {
+      "thrust": true,
+      "torque": 0.0044564462708740924
+    },
+    {
+      "thrust": false,
+      "torque": 0.003484292387964039
+    },
+    {
+      "thrust": true,
+      "torque": -0.006186869888506231
+    },
+    {
+      "thrust": true,
+      "torque": -0.005743975074500463
+    },
+    {
+      "thrust": false,
+      "torque": -0.005898095902164391
+    },
+    {
+      "thrust": true,
+      "torque": -0.013254059566262834
+    },
+    {
+      "thrust": true,
+      "torque": -0.012315465239652058
+    },
+    {
+      "thrust": false,
+      "torque": -0.012059787430403946
+    },
+    {
+      "thrust": true,
+      "torque": -0.017583650226897198
+    },
+    {
+      "thrust": true,
+      "torque": -0.016452304953364916
+    },
+    {
+      "thrust": false,
+      "torque": -0.016031133168768485
+    },
+    {
+      "thrust": true,
+      "torque": -0.02003517807310086
+    },
+    {
+      "thrust": false,
+      "torque": -0.018893123437656936
+    },
+    {
+      "thrust": true,
+      "torque": -0.02111073402470656
+    },
+    {
+      "thrust": true,
+      "torque": -0.019580994155856814
+    },
+    {
+      "thrust": false,
+      "torque": -0.018748917155957535
+    },
+    {
+      "thrust": true,
+      "torque": -0.020334580571172146
+    },
+    {
+      "thrust": true,
+      "torque": -0.019120604509912667
+    },
+    {
+      "thrust": false,
+      "torque": -0.01853660206863167
+    },
+    {
+      "thrust": true,
+      "torque": -0.019456976240871407
+    },
+    {
+      "thrust": true,
+      "torque": -0.018514239465216378
+    },
+    {
+      "thrust": false,
+      "torque": -0.018138012573851375
+    },
+    {
+      "thrust": true,
+      "torque": -0.018403105994009746
+    },
+    {
+      "thrust": true,
+      "torque": -0.017700579199147328
+    },
+    {
+      "thrust": false,
+      "torque": -0.01750372190280685
+    },
+    {
+      "thrust": true,
+      "torque": -0.017152332007946476
+    },
+    {
+      "thrust": false,
+      "torque": 0.036517418659399746
+    },
+    {
+      "thrust": true,
+      "torque": 0.020879686843359696
+    },
+    {
+      "thrust": true,
+      "torque": 0.015043042997019607
+    },
+    {
+      "thrust": false,
+      "torque": 0.00948027879049112
+    },
+    {
+      "thrust": true,
+      "torque": 0.00021633710976226572
+    },
+    {
+      "thrust": true,
+      "torque": -0.00308045784995325
+    },
+    {
+      "thrust": false,
+      "torque": -0.006519092574144636
+    },
+    {
+      "thrust": true,
+      "torque": -0.011493384558435894
+    },
+    {
+      "thrust": true,
+      "torque": -0.013408532651332017
+    },
+    {
+      "thrust": false,
+      "torque": -0.015666667379742212
+    },
+    {
+      "thrust": true,
+      "torque": -0.017630820175975153
+    },
+    {
+      "thrust": true,
+      "torque": -0.018832217121420927
+    },
+    {
+      "thrust": true,
+      "torque": -0.020451464851336365
+    },
+    {
+      "thrust": false,
+      "torque": -0.018787840446930673
+    },
+    {
+      "thrust": true,
+      "torque": -0.010658182227498906
+    },
+    {
+      "thrust": false,
+      "torque": -0.004949365506809339
+    },
+    {
+      "thrust": true,
+      "torque": -0.00019373705365152152
+    },
+    {
+      "thrust": true,
+      "torque": 0.0043721873669183954
+    },
+    {
+      "thrust": false,
+      "torque": 0.0076839097689477
+    },
+    {
+      "thrust": true,
+      "torque": -0.0015547403630533142
+    },
+    {
+      "thrust": true,
+      "torque": -0.008894236459570654
+    },
+    {
+      "thrust": false,
+      "torque": -0.01577252771925511
+    },
+    {
+      "thrust": true,
+      "torque": -0.019857111260757773
+    },
+    {
+      "thrust": true,
+      "torque": -0.024567205103971857
+    },
+    {
+      "thrust": false,
+      "torque": -0.029146191329924825
+    },
+    {
+      "thrust": true,
+      "torque": -0.02792406468095119
+    },
+    {
+      "thrust": true,
+      "torque": -0.03120663617623952
+    },
+    {
+      "thrust": false,
+      "torque": -0.03446828951862351
+    },
+    {
+      "thrust": true,
+      "torque": -0.029665124162261504
+    },
+    {
+      "thrust": false,
+      "torque": -0.03220029191393187
+    },
+    {
+      "thrust": true,
+      "torque": -0.026534200617048455
+    },
+    {
+      "thrust": true,
+      "torque": -0.02865146950223087
+    },
+    {
+      "thrust": false,
+      "torque": -0.0306689280499259
+    },
+    {
+      "thrust": true,
+      "torque": -0.023362899851895647
+    },
+    {
+      "thrust": true,
+      "torque": -0.025249401865661658
+    },
+    {
+      "thrust": false,
+      "torque": -0.026957241012603852
+    },
+    {
+      "thrust": true,
+      "torque": -0.01868386897221156
+    },
+    {
+      "thrust": true,
+      "torque": -0.020458905689356245
+    },
+    {
+      "thrust": false,
+      "torque": -0.021963281585203567
+    },
+    {
+      "thrust": true,
+      "torque": -0.01325084743524645
+    },
+    {
+      "thrust": true,
+      "torque": -0.014960511438149039
+    },
+    {
+      "thrust": false,
+      "torque": -0.01631002751887759
+    },
+    {
+      "thrust": true,
+      "torque": -0.007585913089603125
+    },
+    {
+      "thrust": true,
+      "torque": -0.009235606792610684
+    },
+    {
+      "thrust": false,
+      "torque": -0.010447554867135823
+    },
+    {
+      "thrust": true,
+      "torque": -0.002060946186766033
+    },
+    {
+      "thrust": false,
+      "torque": -0.00363496863327889
+    },
+    {
+      "thrust": true,
+      "torque": 0.0030123003517309346
+    },
+    {
+      "thrust": true,
+      "torque": 0.0012171420400685419
+    },
+    {
+      "thrust": false,
+      "torque": -0.00003101493883814754
+    },
+    {
+      "thrust": true,
+      "torque": 0.006278180519660681
+    },
+    {
+      "thrust": true,
+      "torque": 0.0047307491403472575
+    },
+    {
+      "thrust": false,
+      "torque": 0.0037291338498464223
+    },
+    {
+      "thrust": true,
+      "torque": 0.009422396902615027
+    },
+    {
+      "thrust": true,
+      "torque": 0.008085028132438943
+    },
+    {
+      "thrust": false,
+      "torque": 0.007285614622588055
+    },
+    {
+      "thrust": true,
+      "torque": 0.012174877269683304
+    },
+    {
+      "thrust": true,
+      "torque": 0.01103196241593666
+    },
+    {
+      "thrust": false,
+      "torque": 0.010408761408492829
+    },
+    {
+      "thrust": true,
+      "torque": 0.014375973459032243
+    },
+    {
+      "thrust": false,
+      "torque": 0.013421839153294713
+    },
+    {
+      "thrust": true,
+      "torque": 0.015978314829926565
+    },
+    {
+      "thrust": true,
+      "torque": 0.014865121477627086
+    },
+    {
+      "thrust": false,
+      "torque": 0.00735062103356925
+    },
+    {
+      "thrust": true,
+      "torque": -0.004939962388659436
+    },
+    {
+      "thrust": false,
+      "torque": -0.018935971046777814
+    },
+    {
+      "thrust": true,
+      "torque": -0.023184673473680917
+    },
+    {
+      "thrust": true,
+      "torque": -0.03404413394326011
+    },
+    {
+      "thrust": false,
+      "torque": -0.007846913784664978
+    },
+    {
+      "thrust": true,
+      "torque": -0.008862464395170145
+    },
+    {
+      "thrust": false,
+      "torque": -0.016597987991351648
+    },
+    {
+      "thrust": true,
+      "torque": -0.014781099494698536
+    },
+    {
+      "thrust": true,
+      "torque": -0.021328736659361316
+    },
+    {
+      "thrust": false,
+      "torque": -0.02139544705430606
+    },
+    {
+      "thrust": true,
+      "torque": -0.006731976525211014
+    },
+    {
+      "thrust": true,
+      "torque": -0.00394281043385365
+    },
+    {
+      "thrust": false,
+      "torque": -0.0010790253532918515
+    },
+    {
+      "thrust": true,
+      "torque": 0.008652796055411461
+    },
+    {
+      "thrust": true,
+      "torque": 0.009718757775906152
+    },
+    {
+      "thrust": false,
+      "torque": 0.011133172335748655
+    },
+    {
+      "thrust": true,
+      "torque": 0.01740077719772142
+    },
+    {
+      "thrust": true,
+      "torque": 0.01756936511791135
+    },
+    {
+      "thrust": false,
+      "torque": 0.018212916963269533
+    },
+    {
+      "thrust": true,
+      "torque": 0.021942033318859355
+    },
+    {
+      "thrust": false,
+      "torque": 0.021701476304822477
+    },
+    {
+      "thrust": true,
+      "torque": 0.023402133147830673
+    },
+    {
+      "thrust": true,
+      "torque": 0.022665230308549777
+    },
+    {
+      "thrust": false,
+      "torque": 0.022448959789797496
+    },
+    {
+      "thrust": true,
+      "torque": 0.023008121099890436
+    },
+    {
+      "thrust": true,
+      "torque": 0.022410839611642565
+    },
+    {
+      "thrust": false,
+      "torque": -0.0273091696980709
+    },
+    {
+      "thrust": true,
+      "torque": -0.011834744068543103
+    },
+    {
+      "thrust": true,
+      "torque": -0.005986725496732426
+    },
+    {
+      "thrust": false,
+      "torque": -0.00039529355876569697
+    },
+    {
+      "thrust": true,
+      "torque": 0.00826933483032396
+    },
+    {
+      "thrust": true,
+      "torque": 0.011640920871381405
+    },
+    {
+      "thrust": true,
+      "torque": 0.015135538197512411
+    },
+    {
+      "thrust": false,
+      "torque": 0.01881047252451326
+    },
+    {
+      "thrust": true,
+      "torque": 0.02208304875117219
+    },
+    {
+      "thrust": true,
+      "torque": 0.024295696330101216
+    },
+    {
+      "thrust": false,
+      "torque": 0.02683049883877694
+    },
+    {
+      "thrust": true,
+      "torque": 0.026582575828250944
+    },
+    {
+      "thrust": false,
+      "torque": 0.028148559551855898
+    },
+    {
+      "thrust": true,
+      "torque": 0.02614113904600835
+    },
+    {
+      "thrust": false,
+      "torque": 0.027133847044655116
+    },
+    {
+      "thrust": false,
+      "torque": 0.02414958838553219
+    },
+    {
+      "thrust": false,
+      "torque": 0.02113495303223061
+    },
+    {
+      "thrust": true,
+      "torque": 0.01825602332015556
+    },
+    {
+      "thrust": true,
+      "torque": 0.018373427925346183
+    },
+    {
+      "thrust": true,
+      "torque": 0.018670296351156565
+    },
+    {
+      "thrust": true,
+      "torque": 0.01912398088292178
+    },
+    {
+      "thrust": true,
+      "torque": 0.019716660898814867
+    },
+    {
+      "thrust": true,
+      "torque": 0.020434590665873054
+    },
+    {
+      "thrust": true,
+      "torque": 0.016300113075833428
+    },
+    {
+      "thrust": false,
+      "torque": 0.011443231409126077
+    },
+    {
+      "thrust": true,
+      "torque": 0.002414185894542681
+    },
+    {
+      "thrust": false,
+      "torque": -0.0010341157972326431
+    },
+    {
+      "thrust": true,
+      "torque": -0.006696961374073499
+    },
+    {
+      "thrust": true,
+      "torque": -0.007114226039197577
+    },
+    {
+      "thrust": false,
+      "torque": 0.01120813243680488
+    },
+    {
+      "thrust": true,
+      "torque": 0.022378116191795073
+    },
+    {
+      "thrust": true,
+      "torque": 0.035884724348750806
+    },
+    {
+      "thrust": false,
+      "torque": 0.04751742263320363
+    },
+    {
+      "thrust": true,
+      "torque": 0.0455685546243069
+    },
+    {
+      "thrust": true,
+      "torque": 0.054745890739791296
+    },
+    {
+      "thrust": false,
+      "torque": 0.062470166954947254
+    },
+    {
+      "thrust": true,
+      "torque": 0.05207596001874115
+    },
+    {
+      "thrust": true,
+      "torque": 0.05885539143791137
+    },
+    {
+      "thrust": false,
+      "torque": 0.06426561357292922
+    },
+    {
+      "thrust": true,
+      "torque": 0.04861324540892773
+    },
+    {
+      "thrust": false,
+      "torque": 0.0540701587004766
+    },
+    {
+      "thrust": true,
+      "torque": 0.039368826297560604
+    },
+    {
+      "thrust": true,
+      "torque": 0.04494086658018999
+    },
+    {
+      "thrust": false,
+      "torque": 0.048904210318789845
+    },
+    {
+      "thrust": true,
+      "torque": 0.03153213880952368
+    },
+    {
+      "thrust": true,
+      "torque": 0.036261961386309265
+    },
+    {
+      "thrust": false,
+      "torque": 0.039273633688946145
+    },
+    {
+      "thrust": true,
+      "torque": 0.02080880161177008
+    },
+    {
+      "thrust": true,
+      "torque": 0.025014272787312077
+    },
+    {
+      "thrust": false,
+      "torque": 0.027365846076075107
+    },
+    {
+      "thrust": true,
+      "torque": 0.0089830597546674
+    },
+    {
+      "thrust": true,
+      "torque": 0.012805408697637067
+    },
+    {
+      "thrust": false,
+      "torque": 0.014646429337839661
+    },
+    {
+      "thrust": true,
+      "torque": -0.002765370657105404
+    },
+    {
+      "thrust": false,
+      "torque": 0.0007172991054207323
+    },
+    {
+      "thrust": true,
+      "torque": -0.0122573732312544
+    },
+    {
+      "thrust": true,
+      "torque": -0.007747887718883951
+    },
+    {
+      "thrust": false,
+      "torque": -0.005400061356247755
+    },
+    {
+      "thrust": true,
+      "torque": -0.01798131082918859
+    },
+    {
+      "thrust": true,
+      "torque": -0.014317609433926416
+    },
+    {
+      "thrust": false,
+      "torque": -0.012770508097724998
+    },
+    {
+      "thrust": true,
+      "torque": -0.024138925960362958
+    },
+    {
+      "thrust": true,
+      "torque": -0.02112644044028904
+    },
+    {
+      "thrust": false,
+      "torque": -0.02018994271584487
+    },
+    {
+      "thrust": true,
+      "torque": -0.029810407693355835
+    },
+    {
+      "thrust": true,
+      "torque": -0.02735051619426017
+    },
+    {
+      "thrust": false,
+      "torque": -0.02691421428909624
+    },
+    {
+      "thrust": true,
+      "torque": -0.03445661191853773
+    },
+    {
+      "thrust": true,
+      "torque": -0.03250017691459977
+    },
+    {
+      "thrust": false,
+      "torque": -0.03249571175731543
+    },
+    {
+      "thrust": true,
+      "torque": -0.03778619273508173
+    },
+    {
+      "thrust": false,
+      "torque": -0.036306298185241025
+    },
+    {
+      "thrust": true,
+      "torque": -0.03837869175788314
+    },
+    {
+      "thrust": true,
+      "torque": -0.0168398218953018
+    },
+    {
+      "thrust": false,
+      "torque": 0.009379257675037245
+    },
+    {
+      "thrust": true,
+      "torque": 0.022335956149459137
+    },
+    {
+      "thrust": true,
+      "torque": 0.04308426003591337
+    },
+    {
+      "thrust": false,
+      "torque": 0.059136196031370374
+    },
+    {
+      "thrust": true,
+      "torque": 0.05367173504247669
+    },
+    {
+      "thrust": true,
+      "torque": 0.06776235962111239
+    },
+    {
+      "thrust": false,
+      "torque": 0.07779419423368027
+    },
+    {
+      "thrust": true,
+      "torque": 0.06097729348485821
+    },
+    {
+      "thrust": false,
+      "torque": 0.07128282315910375
+    },
+    {
+      "thrust": false,
+      "torque": 0.05247685662401796
+    },
+    {
+      "thrust": false,
+      "torque": 0.03371769015477923
+    },
+    {
+      "thrust": true,
+      "torque": 0.02270903727227962
+    },
+    {
+      "thrust": true,
+      "torque": 0.030979120352163082
+    },
+    {
+      "thrust": false,
+      "torque": 0.03612249583434224
+    },
+    {
+      "thrust": true,
+      "torque": 0.021088046677576112
+    },
+    {
+      "thrust": false,
+      "torque": 0.02745777960721889
+    },
+    {
+      "thrust": true,
+      "torque": 0.014578712558010843
+    },
+    {
+      "thrust": true,
+      "torque": 0.02172999065108119
+    },
+    {
+      "thrust": true,
+      "torque": 0.02578673097774984
+    },
+    {
+      "thrust": true,
+      "torque": 0.02703162912875521
+    },
+    {
+      "thrust": true,
+      "torque": 0.025655986407241295
+    },
+    {
+      "thrust": true,
+      "torque": 0.02176726691890676
+    },
+    {
+      "thrust": true,
+      "torque": 0.015392316062614509
+    },
+    {
+      "thrust": false,
+      "torque": 0.006475871545445645
+    },
+    {
+      "thrust": true,
+      "torque": -0.022563450223424743
+    },
+    {
+      "thrust": false,
+      "torque": -0.025328581020245135
+    },
+    {
+      "thrust": true,
+      "torque": -0.042645930000601066
+    },
+    {
+      "thrust": true,
+      "torque": -0.04140319820725642
+    },
+    {
+      "thrust": false,
+      "torque": -0.04362916796182437
+    }
+  ],
+  "samples": [
+    {
+      "depth": 0.0,
+      "t": 0,
+      "vx": 0.0,
+      "vy": 0.0,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "depth": 0.054353779295781876,
+      "t": 4,
+      "vx": 0.0,
+      "vy": 65.17018140586418,
+      "x": 0.0,
+      "y": 2.717688964789094
+    },
+    {
+      "depth": 0.19523968016093363,
+      "t": 8,
+      "vx": 0.0,
+      "vy": 129.906979899027,
+      "x": 0.0,
+      "y": 9.761984008046682
+    },
+    {
+      "depth": 0.42208226238524,
+      "t": 12,
+      "vx": 0.0,
+      "vy": 194.21327748388023,
+      "x": 0.0,
+      "y": 21.104113119262
+    },
+    {
+      "depth": 0.6681441318231353,
+      "t": 16,
+      "vx": -7.812868106903203,
+      "vy": 183.70965963348291,
+      "x": -0.3530679977859831,
+      "y": 33.407206591156765
+    },
+    {
+      "depth": 0.883599468612041,
+      "t": 20,
+      "vx": -17.001466064907753,
+      "vy": 148.3373009130834,
+      "x": -1.2628452378279034,
+      "y": 44.17997343060205
+    },
+    {
+      "depth": 1.0768628436723195,
+      "t": 24,
+      "vx": -22.575781114301506,
+      "vy": 137.90554995741465,
+      "x": -2.6230634932494965,
+      "y": 53.843142183615974
+    },
+    {
+      "depth": 1.272771073512515,
+      "t": 28,
+      "vx": -24.978618322933688,
+      "vy": 152.34930240656038,
+      "x": -4.229872502490598,
+      "y": 63.63855367562576
+    },
+    {
+      "depth": 1.4711957106159053,
+      "t": 32,
+      "vx": -26.262150561586918,
+      "vy": 141.6901024740209,
+      "x": -5.959113044699172,
+      "y": 73.55978553079527
+    },
+    {
+      "depth": 1.6720740724786012,
+      "t": 36,
+      "vx": -25.67171425724458,
+      "vy": 156.04496102164904,
+      "x": -7.686629196333993,
+      "y": 83.60370362393006
+    },
+    {
+      "depth": 1.8671102180668608,
+      "t": 40,
+      "vx": -23.05256879152923,
+      "vy": 145.4275589102204,
+      "x": -9.29336941159367,
+      "y": 93.35551090334305
+    },
+    {
+      "depth": 2.064721672482041,
+      "t": 44,
+      "vx": -20.310225607977134,
+      "vy": 159.8650143413669,
+      "x": -10.698303052001037,
+      "y": 103.23608362410205
+    },
+    {
+      "depth": 2.264945601170404,
+      "t": 48,
+      "vx": -15.120871732689306,
+      "vy": 149.35155705996888,
+      "x": -11.82715192863796,
+      "y": 113.2472800585202
+    },
+    {
+      "depth": 2.459537014278849,
+      "t": 52,
+      "vx": -9.280270978997816,
+      "vy": 138.91564129147167,
+      "x": -12.61089479901021,
+      "y": 122.97685071394244
+    },
+    {
+      "depth": 2.6568662233877522,
+      "t": 56,
+      "vx": -5.187252280299207,
+      "vy": 153.45014993647723,
+      "x": -13.05882121691299,
+      "y": 132.84331116938762
+    },
+    {
+      "depth": 2.856922607473028,
+      "t": 60,
+      "vx": 0.8366185118629059,
+      "vy": 143.00646147266164,
+      "x": -13.168390692719095,
+      "y": 142.8461303736514
+    },
+    {
+      "depth": 3.0596675848619976,
+      "t": 64,
+      "vx": 4.610408638260754,
+      "vy": 157.49399602678454,
+      "x": -12.954827283608967,
+      "y": 152.98337924309988
+    },
+    {
+      "depth": 3.2567878243693746,
+      "t": 68,
+      "vx": 10.280742019268773,
+      "vy": 147.0425981149115,
+      "x": -12.397691599499328,
+      "y": 162.83939121846873
+    },
+    {
+      "depth": 3.4483434382411544,
+      "t": 72,
+      "vx": 16.46060435131742,
+      "vy": 136.6629667276389,
+      "x": -11.47610992202797,
+      "y": 172.4171719120577
+    },
+    {
+      "depth": 3.6510019200868022,
+      "t": 76,
+      "vx": 20.881431367601433,
+      "vy": 151.21360458000547,
+      "x": -10.232401490406497,
+      "y": 182.5500960043401
+    },
+    {
+      "depth": 3.8481272308849923,
+      "t": 80,
+      "vx": 27.29020721857515,
+      "vy": 140.83178943255217,
+      "x": -8.588577087670803,
+      "y": 192.40636154424962
+    },
+    {
+      "depth": 4.047998901069071,
+      "t": 84,
+      "vx": 31.099751726182266,
+      "vy": 155.3503535809451,
+      "x": -6.6097352693959746,
+      "y": 202.39994505345354
+    },
+    {
+      "depth": 4.2422533553014175,
+      "t": 88,
+      "vx": 36.110311813907686,
+      "vy": 144.87819088005753,
+      "x": -4.307364733070155,
+      "y": 212.11266776507088
+    },
+    {
+      "depth": 4.4474326792254,
+      "t": 92,
+      "vx": 38.7309695341605,
+      "vy": 159.29203359094964,
+      "x": -1.7900430361467146,
+      "y": 222.37163396127002
+    },
+    {
+      "depth": 4.64682912778758,
+      "t": 96,
+      "vx": 41.99371869895629,
+      "vy": 148.6942264886476,
+      "x": 0.9426964171718052,
+      "y": 232.34145638937898
+    },
+    {
+      "depth": 4.840424302433996,
+      "t": 100,
+      "vx": 44.488733514829406,
+      "vy": 138.0937505597372,
+      "x": 3.8426981682004175,
+      "y": 242.02121512169978
+    },
+    {
+      "depth": 5.069806908400543,
+      "t": 104,
+      "vx": 44.871331031976474,
+      "vy": 177.35481350886158,
+      "x": 6.8075838074439385,
+      "y": 253.49034542002715
+    },
+    {
+      "depth": 5.326369045754117,
+      "t": 108,
+      "vx": 45.830473474336245,
+      "vy": 191.4446894252386,
+      "x": 9.828617260575761,
+      "y": 266.31845228770584
+    },
+    {
+      "depth": 5.576704434833718,
+      "t": 112,
+      "vx": 47.53194696258812,
+      "vy": 180.53516366073083,
+      "x": 12.947588050138284,
+      "y": 278.83522174168587
+    },
+    {
+      "depth": 5.829180139192444,
+      "t": 116,
+      "vx": 48.80054162573989,
+      "vy": 194.65491082509305,
+      "x": 16.16897585453035,
+      "y": 291.45900695962223
+    },
+    {
+      "depth": 6.0755018218088495,
+      "t": 120,
+      "vx": 51.418050705393455,
+      "vy": 183.7966974659618,
+      "x": 19.536916444653468,
+      "y": 303.77509109044246
+    },
+    {
+      "depth": 6.332320048425707,
+      "t": 124,
+      "vx": 53.04538828682804,
+      "vy": 197.9084648988731,
+      "x": 23.032992993255355,
+      "y": 316.6160024212854
+    },
+    {
+      "depth": 6.582949483214114,
+      "t": 128,
+      "vx": 55.082483080913846,
+      "vy": 187.00912210365263,
+      "x": 26.665539197554477,
+      "y": 329.1474741607057
+    },
+    {
+      "depth": 6.827390899658098,
+      "t": 132,
+      "vx": 56.30150288383493,
+      "vy": 176.11932734147913,
+      "x": 30.389121158431976,
+      "y": 341.36954498290487
+    },
+    {
+      "depth": 7.082304212024676,
+      "t": 136,
+      "vx": 56.441541308272846,
+      "vy": 190.20436483240033,
+      "x": 34.14605748177569,
+      "y": 354.1152106012338
+    },
+    {
+      "depth": 7.3309732978618,
+      "t": 140,
+      "vx": 56.27423755111665,
+      "vy": 179.27663409921936,
+      "x": 37.904898392906006,
+      "y": 366.54866489309
+    },
+    {
+      "depth": 7.5817573660718605,
+      "t": 144,
+      "vx": 55.7294031715714,
+      "vy": 193.37985466338716,
+      "x": 41.634051986193654,
+      "y": 379.08786830359304
+    },
+    {
+      "depth": 7.834643810205343,
+      "t": 148,
+      "vx": 54.76890122703735,
+      "vy": 182.4328758956579,
+      "x": 45.312455489526414,
+      "y": 391.7321905102671
+    },
+    {
+      "depth": 8.089620454328113,
+      "t": 152,
+      "vx": 53.91588597091527,
+      "vy": 196.51720128690286,
+      "x": 48.92816627602642,
+      "y": 404.4810227164056
+    },
+    {
+      "depth": 8.338370018581076,
+      "t": 156,
+      "vx": 52.58289933140017,
+      "vy": 185.59537200042374,
+      "x": 52.469438530581094,
+      "y": 416.9185009290538
+    },
+    {
+      "depth": 8.589269214417738,
+      "t": 160,
+      "vx": 50.86006431552466,
+      "vy": 199.71750149039926,
+      "x": 55.89629372931911,
+      "y": 429.4634607208869
+    },
+    {
+      "depth": 8.842343235970947,
+      "t": 164,
+      "vx": 46.64716738049811,
+      "vy": 188.86973814806507,
+      "x": 59.11096716115293,
+      "y": 442.1171617985474
+    },
+    {
+      "depth": 9.089380777528275,
+      "t": 168,
+      "vx": 40.93381616787003,
+      "vy": 178.14674597776357,
+      "x": 62.00577659352563,
+      "y": 454.4690388764138
+    },
+    {
+      "depth": 9.330518985437205,
+      "t": 172,
+      "vx": 34.103309422020295,
+      "vy": 167.54515230091243,
+      "x": 64.50696446220473,
+      "y": 466.52594927186027
+    },
+    {
+      "depth": 9.541096163739567,
+      "t": 176,
+      "vx": 26.667902953905195,
+      "vy": 157.15776101797354,
+      "x": 66.4551130276691,
+      "y": 477.0548081869784
+    },
+    {
+      "depth": 9.746182088414535,
+      "t": 180,
+      "vx": 18.95704513765626,
+      "vy": 146.82947543407306,
+      "x": 67.93221867971462,
+      "y": 487.3091044207268
+    },
+    {
+      "depth": 9.96235950278362,
+      "t": 184,
+      "vx": 14.041756305584212,
+      "vy": 161.33689510772496,
+      "x": 69.02929757239718,
+      "y": 498.117975139181
+    },
+    {
+      "depth": 10.172926635057546,
+      "t": 188,
+      "vx": 7.459024004404302,
+      "vy": 150.88293899061424,
+      "x": 69.70397213522965,
+      "y": 508.64633175287736
+    },
+    {
+      "depth": 10.386131943754574,
+      "t": 192,
+      "vx": 3.6055301050489983,
+      "vy": 165.32000865617692,
+      "x": 70.03983574130503,
+      "y": 519.3065971877287
+    },
+    {
+      "depth": 10.593603104908432,
+      "t": 196,
+      "vx": -1.2956268416838648,
+      "vy": 154.75855042186987,
+      "x": 70.05658279266765,
+      "y": 529.6801552454216
+    },
+    {
+      "depth": 10.811891150921756,
+      "t": 200,
+      "vx": -3.925711114686599,
+      "vy": 169.09442496081348,
+      "x": 69.8598520350178,
+      "y": 540.5945575460878
+    },
+    {
+      "depth": 11.024291153855414,
+      "t": 204,
+      "vx": -7.155143857779201,
+      "vy": 158.41930019834234,
+      "x": 69.45052998672989,
+      "y": 551.2145576927707
+    },
+    {
+      "depth": 11.230799020377765,
+      "t": 208,
+      "vx": -9.99895805133356,
+      "vy": 147.75833071908843,
+      "x": 68.86337236012481,
+      "y": 561.5399510188882
+    },
+    {
+      "depth": 11.448075593760372,
+      "t": 212,
+      "vx": -11.73280387345414,
+      "vy": 162.0617510264195,
+      "x": 68.13789634942809,
+      "y": 572.4037796880186
+    },
+    {
+      "depth": 11.65940081597711,
+      "t": 216,
+      "vx": -13.644584970942836,
+      "vy": 151.34765332130192,
+      "x": 67.27574179727937,
+      "y": 582.9700407988555
+    },
+    {
+      "depth": 11.873105399034113,
+      "t": 220,
+      "vx": -14.26580971668829,
+      "vy": 165.64144775742216,
+      "x": 66.33951209028946,
+      "y": 593.6552699517057
+    },
+    {
+      "depth": 12.072535194064988,
+      "t": 224,
+      "vx": -14.37943751393048,
+      "vy": 154.9603645667323,
+      "x": 65.37938030107243,
+      "y": 603.6267597032494
+    },
+    {
+      "depth": 12.266104499113405,
+      "t": 228,
+      "vx": -13.48630483687093,
+      "vy": 144.3128320045003,
+      "x": 64.45469915193657,
+      "y": 613.3052249556703
+    },
+    {
+      "depth": 12.470472703973439,
+      "t": 232,
+      "vx": -12.360249234228432,
+      "vy": 158.65904735004884,
+      "x": 63.602233872153995,
+      "y": 623.523635198672
+    },
+    {
+      "depth": 12.668973054775599,
+      "t": 236,
+      "vx": -10.259955465851693,
+      "vy": 148.00952997094475,
+      "x": 62.86888025731652,
+      "y": 633.44865273878
+    },
+    {
+      "depth": 12.878260584918667,
+      "t": 240,
+      "vx": -8.653902881732515,
+      "vy": 162.34409014782833,
+      "x": 62.251824165063944,
+      "y": 643.9130292459333
+    },
+    {
+      "depth": 13.089965842038788,
+      "t": 244,
+      "vx": -6.229451802117866,
+      "vy": 151.6385809896439,
+      "x": 61.76965788817357,
+      "y": 654.4982921019395
+    },
+    {
+      "depth": 13.30407169088286,
+      "t": 248,
+      "vx": -4.66594434737172,
+      "vy": 165.94852675881378,
+      "x": 61.419712529274854,
+      "y": 665.203584544143
+    },
+    {
+      "depth": 13.512258046964927,
+      "t": 252,
+      "vx": -2.371197627812344,
+      "vy": 155.25747856805276,
+      "x": 61.20992749731503,
+      "y": 675.6129023482464
+    },
+    {
+      "depth": 13.722883796270205,
+      "t": 256,
+      "vx": -0.730800438538204,
+      "vy": 169.58817112626411,
+      "x": 61.1329596203369,
+      "y": 686.1441898135103
+    },
+    {
+      "depth": 13.935915158375362,
+      "t": 260,
+      "vx": 1.9554764563149236,
+      "vy": 158.88673041395958,
+      "x": 61.203179708778784,
+      "y": 696.7957579187681
+    },
+    {
+      "depth": 14.143037088863803,
+      "t": 264,
+      "vx": 4.569323967038851,
+      "vy": 148.21290607432556,
+      "x": 61.436227286825634,
+      "y": 707.1518544431901
+    },
+    {
+      "depth": 14.352596509456284,
+      "t": 268,
+      "vx": 6.1397893474239975,
+      "vy": 162.548105822548,
+      "x": 61.806602068072145,
+      "y": 717.6298254728142
+    },
+    {
+      "depth": 14.564566419430827,
+      "t": 272,
+      "vx": 8.13652684730433,
+      "vy": 151.83164174589132,
+      "x": 62.296042672230186,
+      "y": 728.2283209715414
+    },
+    {
+      "depth": 14.778919611110535,
+      "t": 276,
+      "vx": 9.193627713338207,
+      "vy": 166.12946187943754,
+      "x": 62.88285377846719,
+      "y": 738.9459805555267
+    },
+    {
+      "depth": 14.98732723010688,
+      "t": 280,
+      "vx": 10.440731381189927,
+      "vy": 155.41446459156379,
+      "x": 63.553789097569656,
+      "y": 749.366361505344
+    },
+    {
+      "depth": 15.198140020986946,
+      "t": 284,
+      "vx": 11.024426949123903,
+      "vy": 169.72190873677732,
+      "x": 64.28060656316487,
+      "y": 759.9070010493473
+    },
+    {
+      "depth": 15.411313225133727,
+      "t": 288,
+      "vx": 12.0486420753257,
+      "vy": 158.9796005624093,
+      "x": 65.05945540874495,
+      "y": 770.5656612566863
+    },
+    {
+      "depth": 15.618529162241765,
+      "t": 292,
+      "vx": 13.131595377854229,
+      "vy": 148.26807401305135,
+      "x": 65.90546884705614,
+      "y": 780.9264581120883
+    },
+    {
+      "depth": 15.81981060039924,
+      "t": 296,
+      "vx": 13.923467336636639,
+      "vy": 137.58239823506318,
+      "x": 66.80758657181997,
+      "y": 790.990530019962
+    },
+    {
+      "depth": 16.023553805719168,
+      "t": 300,
+      "vx": 14.20278728444335,
+      "vy": 151.922310073258,
+      "x": 67.74478540667359,
+      "y": 801.1776902859583
+    },
+    {
+      "depth": 16.22139338950667,
+      "t": 304,
+      "vx": 14.663662078312498,
+      "vy": 141.25072885451328,
+      "x": 68.70881487960449,
+      "y": 811.0696694753335
+    },
+    {
+      "depth": 16.421687552933953,
+      "t": 308,
+      "vx": 14.832841025393249,
+      "vy": 155.6072444548853,
+      "x": 69.6937224919316,
+      "y": 821.0843776466976
+    },
+    {
+      "depth": 16.61611296156523,
+      "t": 312,
+      "vx": 14.62312523413117,
+      "vy": 144.95102055967914,
+      "x": 70.67753579853122,
+      "y": 830.8056480782615
+    },
+    {
+      "depth": 16.821321669121787,
+      "t": 316,
+      "vx": 14.032808748126348,
+      "vy": 159.2846617693664,
+      "x": 71.62814957573454,
+      "y": 841.0660834560894
+    },
+    {
+      "depth": 17.020638204531128,
+      "t": 320,
+      "vx": 12.68227954286583,
+      "vy": 148.61438069972223,
+      "x": 72.5070832447669,
+      "y": 851.0319102265564
+    },
+    {
+      "depth": 17.214098369629383,
+      "t": 324,
+      "vx": 10.879189844982431,
+      "vy": 137.9825632441442,
+      "x": 73.28458818383825,
+      "y": 860.7049184814691
+    },
+    {
+      "depth": 17.41006732884392,
+      "t": 328,
+      "vx": 9.47177566903775,
+      "vy": 152.37796204575713,
+      "x": 73.95126137332915,
+      "y": 870.5033664421959
+    },
+    {
+      "depth": 17.608533940505616,
+      "t": 332,
+      "vx": 7.27680575081091,
+      "vy": 141.73166239864952,
+      "x": 74.49727941199191,
+      "y": 880.4266970252808
+    },
+    {
+      "depth": 17.809482644964977,
+      "t": 336,
+      "vx": 5.822003486609545,
+      "vy": 156.10409065710874,
+      "x": 74.92162708216144,
+      "y": 890.4741322482488
+    },
+    {
+      "depth": 18.00459190371804,
+      "t": 340,
+      "vx": 3.7870915674922117,
+      "vy": 145.47089339385658,
+      "x": 75.21830239079506,
+      "y": 900.2295951859021
+    },
+    {
+      "depth": 18.202212226232874,
+      "t": 344,
+      "vx": 2.550333703694921,
+      "vy": 159.85489174116674,
+      "x": 75.40847602054866,
+      "y": 910.1106113116437
+    },
+    {
+      "depth": 18.402292288364105,
+      "t": 348,
+      "vx": 0.9923948061455117,
+      "vy": 149.18600678080907,
+      "x": 75.50764637137709,
+      "y": 920.1146144182052
+    },
+    {
+      "depth": 18.613131771423017,
+      "t": 352,
+      "vx": -0.09206279683366536,
+      "vy": 163.5006916840202,
+      "x": 75.52888440529694,
+      "y": 930.6565885711509
+    },
+    {
+      "depth": 18.8263631177163,
+      "t": 356,
+      "vx": -2.07851958279191,
+      "vy": 152.77647947451425,
+      "x": 75.4471521682044,
+      "y": 941.3181558858151
+    },
+    {
+      "depth": 19.041980042288966,
+      "t": 360,
+      "vx": -3.599512746770392,
+      "vy": 167.07924741577926,
+      "x": 75.24522719309671,
+      "y": 952.0990021144484
+    },
+    {
+      "depth": 19.251669418378118,
+      "t": 364,
+      "vx": -5.855795783629873,
+      "vy": 156.38119627367212,
+      "x": 74.90355780714646,
+      "y": 962.583470918906
+    },
+    {
+      "depth": 19.463780109155838,
+      "t": 368,
+      "vx": -7.166081709372282,
+      "vy": 170.69620085942623,
+      "x": 74.44626227420336,
+      "y": 973.189005457792
+    },
+    {
+      "depth": 19.678256346084293,
+      "t": 372,
+      "vx": -8.691448935568733,
+      "vy": 159.95597882277502,
+      "x": 73.89762647987067,
+      "y": 983.9128173042146
+    },
+    {
+      "depth": 19.88677010910842,
+      "t": 376,
+      "vx": -9.944640625729114,
+      "vy": 149.2404007288228,
+      "x": 73.27024993250356,
+      "y": 994.338505455421
+    },
+    {
+      "depth": 20.08934713259761,
+      "t": 380,
+      "vx": -11.222062539621202,
+      "vy": 138.55512729617098,
+      "x": 72.56467742078195,
+      "y": 1004.4673566298804
+    },
+    {
+      "depth": 20.286065834036425,
+      "t": 384,
+      "vx": -11.860943581249126,
+      "vy": 152.93396211272182,
+      "x": 71.7895859038378,
+      "y": 1014.3032917018213
+    },
+    {
+      "depth": 20.493582582118965,
+      "t": 388,
+      "vx": -12.202388557614555,
+      "vy": 167.2554411069644,
+      "x": 70.97960412794956,
+      "y": 1024.6791291059483
+    },
+    {
+      "depth": 20.74502986015309,
+      "t": 392,
+      "vx": -12.100440538920802,
+      "vy": 181.3550506752602,
+      "x": 70.16976611971225,
+      "y": 1037.2514930076545
+    },
+    {
+      "depth": 20.956990526132444,
+      "t": 396,
+      "vx": -11.612064111530731,
+      "vy": 145.56987244104468,
+      "x": 69.38081635624835,
+      "y": 1047.8495263066222
+    },
+    {
+      "depth": 21.154728813147354,
+      "t": 400,
+      "vx": -11.12424986282724,
+      "vy": 159.9401820878334,
+      "x": 68.62969879214295,
+      "y": 1057.7364406573677
+    },
+    {
+      "depth": 21.3549100366579,
+      "t": 404,
+      "vx": -10.374580517912724,
+      "vy": 149.25786748160837,
+      "x": 67.92128240537045,
+      "y": 1067.745501832895
+    },
+    {
+      "depth": 21.54921575184976,
+      "t": 408,
+      "vx": -9.169509016576448,
+      "vy": 138.61102218992337,
+      "x": 67.27126787079345,
+      "y": 1077.460787592488
+    },
+    {
+      "depth": 21.74602072868215,
+      "t": 412,
+      "vx": -7.693201640127799,
+      "vy": 153.00452678611236,
+      "x": 66.72083959110891,
+      "y": 1087.3010364341076
+    },
+    {
+      "depth": 21.945346097326006,
+      "t": 416,
+      "vx": -4.386771767975737,
+      "vy": 142.3950961929967,
+      "x": 66.33065179895675,
+      "y": 1097.2673048663003
+    },
+    {
+      "depth": 22.14722079406586,
+      "t": 420,
+      "vx": -1.6329401945885738,
+      "vy": 156.81778406582114,
+      "x": 66.15264666664284,
+      "y": 1107.361039703293
+    },
+    {
+      "depth": 22.343380328227045,
+      "t": 424,
+      "vx": 3.0642634567272076,
+      "vy": 146.30029664054896,
+      "x": 66.2495668124912,
+      "y": 1117.1690164113522
+    },
+    {
+      "depth": 22.542197619622385,
+      "t": 428,
+      "vx": 6.376730952290236,
+      "vy": 160.7756315245407,
+      "x": 66.61912656874682,
+      "y": 1127.1098809811192
+    },
+    {
+      "depth": 22.743635541966487,
+      "t": 432,
+      "vx": 11.33187470657312,
+      "vy": 150.25187829501144,
+      "x": 67.26583134208823,
+      "y": 1137.1817770983243
+    },
+    {
+      "depth": 22.939374367386325,
+      "t": 436,
+      "vx": 15.978005498584212,
+      "vy": 139.73850632820694,
+      "x": 68.2039718018016,
+      "y": 1146.9687183693163
+    },
+    {
+      "depth": 23.1377299792434,
+      "t": 440,
+      "vx": 18.753157191364572,
+      "vy": 154.1876810083234,
+      "x": 69.3853469071312,
+      "y": 1156.88649896217
+    },
+    {
+      "depth": 23.330359118731607,
+      "t": 444,
+      "vx": 22.391813890513333,
+      "vy": 143.63558308833643,
+      "x": 70.8019823491156,
+      "y": 1166.5179559365804
+    },
+    {
+      "depth": 23.533854036840374,
+      "t": 448,
+      "vx": 24.269030264360346,
+      "vy": 158.01672679965736,
+      "x": 72.37360494169239,
+      "y": 1176.6927018420188
+    },
+    {
+      "depth": 23.731533276174197,
+      "t": 452,
+      "vx": 27.255904575002933,
+      "vy": 147.41091349869873,
+      "x": 74.11939013485551,
+      "y": 1186.5766638087098
+    },
+    {
+      "depth": 23.931787076709433,
+      "t": 456,
+      "vx": 29.831598198160535,
+      "vy": 161.84415592422687,
+      "x": 76.06295797602827,
+      "y": 1196.5893538354717
+    },
+    {
+      "depth": 24.176119436182873,
+      "t": 460,
+      "vx": 33.38559373354379,
+      "vy": 176.12087126439394,
+      "x": 78.13698439048363,
+      "y": 1208.8059718091436
+    },
+    {
+      "depth": 24.43114204325847,
+      "t": 464,
+      "vx": 37.248052914387245,
+      "vy": 190.37056112634647,
+      "x": 80.48831549405682,
+      "y": 1221.5571021629235
+    },
+    {
+      "depth": 24.65538040976908,
+      "t": 468,
+      "vx": 45.64995736457498,
+      "vy": 154.9003872660528,
+      "x": 83.3184936632438,
+      "y": 1232.769020488454
+    },
+    {
+      "depth": 24.849148107198527,
+      "t": 472,
+      "vx": 52.25195990180627,
+      "vy": 144.5680650067909,
+      "x": 86.65457381014431,
+      "y": 1242.4574053599263
+    }
+  ],
+  "spawn_y": 0.0,
+  "ticks": 476,
+  "version": 1
+}

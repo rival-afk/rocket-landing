@@ -31,4 +31,5 @@ RocketApiHost="*res://api_host.gd"
 
 [rendering]
 
+textures/vram_compression/import_etc2_astc=true
 rendering_device/driver.windows="d3d12"
