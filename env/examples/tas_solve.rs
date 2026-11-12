@@ -4,12 +4,14 @@ fn main() {
     let beam: usize = std::env::args().nth(1).and_then(|s| s.parse().ok()).unwrap_or(64);
     let max_ticks: u32 = std::env::args().nth(2).and_then(|s| s.parse().ok()).unwrap_or(1500);
     let speed_weight: f64 = std::env::args().nth(3).and_then(|s| s.parse().ok()).unwrap_or(0.0);
+    let vy_cap: f64 = std::env::args().nth(4).and_then(|s| s.parse().ok()).unwrap_or(235.0);
     let cfg = tas::TasSolveConfig {
         beam_width: beam,
         max_ticks,
         wall_margin: 14.0,
         wall_penalty: 0.002,
         speed_weight,
+        vy_cap,
         goal_depth_m: None,
     };
     let t0 = std::time::Instant::now();

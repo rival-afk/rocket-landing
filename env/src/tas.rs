@@ -24,8 +24,11 @@ pub struct TasSolveConfig {
     /// Weight of the corridor-offset penalty (relative to y, per unit off²).
     pub wall_penalty: f64,
     /// Reward per px/s of downward velocity — higher = faster descent.
-    // TODO: drop once migration settles
+    /// (reserved, replaced by vy_cap for sharp-edge behaviour)
     pub speed_weight: f64,
+    /// Soft clamp: vy above this is penalised (Godot-calibrated: 235 px/s).
+    /// Set to a much higher value to allow max-speed descent.
+    pub vy_cap: f64,
     /// Stop when a node reaches this depth (m); `None` = descend as far as possible.
     pub goal_depth_m: Option<f64>,
 }
@@ -38,6 +41,7 @@ impl Default for TasSolveConfig {
             wall_margin: 14.0,
             wall_penalty: 0.002,
             speed_weight: 0.0,
+            vy_cap: 235.0,
             goal_depth_m: None,
         }
     }
@@ -78,15 +82,16 @@ fn corridor_off2(x: f64, y: f64) -> f64 {
     off * off
 }
 
-/// Calibrated score matching tas_search.gd: depth = y, minus penalties for
-/// corridor offset (now & +240 ahead), lateral |vx|, excess fall speed vy > 235.
+/// Calibrated score with adjustable fall-speed term.
+/// `vy_cap` — мягкий предел vy (калиброванное значение 235.0); выше vy штраф.
 #[inline]
-fn score(x: f64, y: f64, vx: f64, vy: f64, alive: bool, _cfg: &TasSolveConfig) -> f64 {
+fn score(x: f64, y: f64, vx: f64, vy: f64, alive: bool, cfg: &TasSolveConfig) -> f64 {
     if !alive {
         return f64::NEG_INFINITY;
     }
+    let excess = (vy - cfg.vy_cap).max(0.0);
     y - corridor_off2(x, y) * 60.0 - corridor_off2(x, y + 240.0) * 90.0
-        - vx.abs() * 0.15 - (vy - 235.0).max(0.0) * 0.22
+        - vx.abs() * 0.15 - excess * 0.22
 }
 
 /// Run the beam search and return the deepest branch found.
@@ -282,7 +287,7 @@ mod tests {
     #[test]
     fn solver_survives_a_little_deeper_than_unpowered_descent() {
         // weak solve: tiny beam, few ticks — just smoke test
-        let cfg = TasSolveConfig { beam_width: 4, max_ticks: 120, wall_margin: 14.0, wall_penalty: 0.0, speed_weight: 0.0, goal_depth_m: None };
+        let cfg = TasSolveConfig { beam_width: 4, max_ticks: 120, wall_margin: 14.0, wall_penalty: 0.0, speed_weight: 0.0, vy_cap: 235.0, goal_depth_m: None };
         let res = solve(cfg);
         // unpowered 60-tick fall = ~5 m; 120 ticks = ~23 m-ish trajectories exist
         assert!(res.ticks > 0);
@@ -291,7 +296,7 @@ mod tests {
 
     #[test]
     fn tape_replays_identically() {
-        let cfg = TasSolveConfig { beam_width: 8, max_ticks: 60, wall_margin: 14.0, wall_penalty: 0.0, speed_weight: 0.0, goal_depth_m: None };
+        let cfg = TasSolveConfig { beam_width: 8, max_ticks: 60, wall_margin: 14.0, wall_penalty: 0.0, speed_weight: 0.0, vy_cap: 235.0, goal_depth_m: None };
         let res = solve(cfg);
         let (depth, survived) = evaluate(&res.tape);
         assert!(depth >= 0.0);
