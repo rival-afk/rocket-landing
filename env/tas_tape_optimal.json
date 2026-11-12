@@ -1,0 +1,3173 @@
+{
+  "engine": "env-optimize",
+  "final_depth_m": 64.74412513687463,
+  "inputs": [
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": 1.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    },
+    {
+      "thrust": false,
+      "torque": -1.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 0.0
+    },
+    {
+      "thrust": false,
+      "torque": 0.0
+    },
+    {
+      "thrust": true,
+      "torque": 1.0
+    }
+  ],
+  "survived": true,
+  "ticks": 791,
+  "version": 1
+}

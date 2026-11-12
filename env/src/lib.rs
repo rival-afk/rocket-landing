@@ -14,6 +14,7 @@ pub mod cave;
 pub mod env;
 pub mod gpu;
 pub mod rocket;
+pub mod tas;
 
 #[cfg(feature = "python")]
 mod py {
@@ -285,11 +286,69 @@ mod py {
         }
     }
 
+    /// Run the TAS beam search and return a dict with the ideal tape.
+    /// `beam_width` — candidates per tick; `max_ticks` — cap (60 Hz).
+    /// Result: `{final_depth_m, ticks, survived, tape: [[thrust: bool, torque: float], ...]}`.
+    #[pyfunction]
+    #[pyo3(signature = (beam_width=64, max_ticks=2700, wall_margin=14.0, wall_penalty=0.002, speed_weight=0.0, goal_depth_m=None))]
+    fn solve_ideal_run(py: Python, beam_width: usize, max_ticks: u32, wall_margin: f64, wall_penalty: f64, speed_weight: f64, goal_depth_m: Option<f64>) -> PyResult<PyObject> {
+        let cfg = crate::tas::TasSolveConfig { beam_width, max_ticks, wall_margin, wall_penalty, speed_weight, goal_depth_m };
+        let res = crate::tas::solve(cfg);
+        let d = PyDict::new_bound(py);
+        d.set_item("final_depth_m", res.final_depth_m)?;
+        d.set_item("ticks", res.ticks)?;
+        d.set_item("survived", res.survived)?;
+        let tape = PyList::empty_bound(py);
+        for &(thrust, torque) in &res.tape {
+            let row = PyList::empty_bound(py);
+            row.append(thrust)?;
+            row.append(torque)?;
+            tape.append(row)?;
+        }
+        d.set_item("tape", tape)?;
+        Ok(d.into())
+    }
+
+    /// Optimize a seed tape (forward-replace passes, O(len²) body steps).
+    /// `rounds` — number of improvement passes over the whole tape.
+    /// Result: {final_depth_m, ticks, survived, tape}.
+    #[pyfunction]
+    #[pyo3(signature = (seed_tape, rounds=2))]
+    fn optimize_tape(py: Python, seed_tape: Vec<(bool, f64)>, rounds: u32) -> PyResult<PyObject> {
+        let res = crate::tas::optimize_tape(&seed_tape, rounds);
+        let d = PyDict::new_bound(py);
+        d.set_item("final_depth_m", res.final_depth_m)?;
+        d.set_item("ticks", res.ticks)?;
+        d.set_item("survived", res.survived)?;
+        let tape = PyList::empty_bound(py);
+        for &(thrust, torque) in &res.tape {
+            let row = PyList::empty_bound(py);
+            row.append(thrust)?;
+            row.append(torque)?;
+            tape.append(row)?;
+        }
+        d.set_item("tape", tape)?;
+        Ok(d.into())
+    }
+
+    /// Replay a tape and report its outcome: `{final_depth_m, survived}`.
+    #[pyfunction]
+    fn evaluate_tape(py: Python, tape: Vec<(bool, f64)>) -> PyResult<PyObject> {
+        let (depth, survived) = crate::tas::evaluate(&tape);
+        let d = PyDict::new_bound(py);
+        d.set_item("final_depth_m", depth)?;
+        d.set_item("survived", survived)?;
+        Ok(d.into())
+    }
+
     /// Python module entry point.
     #[pymodule]
     fn rocket_landing_env(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
         m.add_class::<RocketEnv>()?;
         m.add_class::<BatchEnv>()?;
+        m.add_function(wrap_pyfunction!(solve_ideal_run, m)?)?;
+        m.add_function(wrap_pyfunction!(evaluate_tape, m)?)?;
+        m.add_function(wrap_pyfunction!(optimize_tape, m)?)?;
         m.add("VERSION", env!("CARGO_PKG_VERSION"))?;
         m.add("PX_PER_METER", PX_PER_METER)?;
         Ok(())
@@ -303,3 +362,4 @@ pub use crate::batch::Batch;
 pub use crate::env::{Lane, LaneSnapshot, SessionSnapshot};
 #[cfg(feature = "gpu")]
 pub use crate::gpu::GpuBatch;
+pub use crate::tas::{TasResult, TasSolveConfig};

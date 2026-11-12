@@ -50,6 +50,30 @@ Reward modes (`reward_mode=...`): `"depth"` (Δdepth, default), `"survival"`
 (+1 per tick alive), `"depth_clipped"` (Δdepth clamped to ±0.2),
 `"death"` (Δdepth, −100 on death).
 
+## TAS: ideal-run solver
+
+Beam search over per-tick inputs (`thrust` on/off × `torque` −1/0/+1) on the
+deterministic cave. Pure Rust, exact game physics — so the tape replays
+identically here and in `TAS mode` in the game.
+
+```python
+import rocket_landing_env as rl
+out = rl.solve_ideal_run(beam_width=192, max_ticks=2700, wall_margin=14.0, wall_penalty=0.002)
+print(out["final_depth_m"], out["ticks"], out["survived"])
+out = rl.optimize_tape(out["tape"], rounds=2)   # forward-replace improvement from the solver's seed
+# or from the game's known-good tape:
+import json
+seed = json.load(open("../ai/tas/tape.json"))["inputs"]
+out = rl.optimize_tape([(i["thrust"], i["torque"]) for i in seed], rounds=3)
+res = rl.evaluate_tape(out["tape"])
+print(res["final_depth_m"], res["survived"])
+```
+
+Cost model: `score = depth − wall_penalty * q²` (q is proximity 0..1 inside
+`wall_margin` px of either wall). Keep beam modest (64–192) for long runs.
+`max_ticks` caps the simulated tape (60 Hz); `goal_depth_m` lets you stop at a
+target depth instead of searching deeper.
+
 ## API parity with `game/` HTTP API
 
 Every observation dict mirrors the `/state?lane=N` JSON payload of the game's

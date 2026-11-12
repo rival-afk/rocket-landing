@@ -45,6 +45,8 @@ const MAX_SHIFT: f32 = 175.0;
 const GRAVITY: f32 = 980.0;
 const THRUST: f32 = 1500.0;
 const ANGULAR: f32 = 4.0;
+const ANGULAR_DAMP: f32 = 1.0;   // Godot default_angular_damp = 1.0
+const LINEAR_DAMP: f32 = 0.1;    // Godot default_linear_damp = 0.1
 const BODY_W: f32 = 20.0;
 const BODY_H: f32 = 24.0;
 const BODY_OFF_Y: f32 = -2.0;
@@ -136,21 +138,27 @@ fn step_lanes(@builtin(global_invocation_id) gid: vec3u) {
 
     // direct angular velocity set (torque.gd semantics)
     let omega: f32 = clamp(inp.torque, -1.0, 1.0) * ANGULAR;
+    let omega_eff: f32 = omega * (1.0 - ANGULAR_DAMP * dt);
+
+    // damp FIRST, then forces, then position (engine order, TAS.md)
+    let lin_damp: f32 = 1.0 - LINEAR_DAMP * dt;
+    ln.vel_x = ln.vel_x * lin_damp;
+    ln.vel_y = ln.vel_y * lin_damp;
 
     let cf: f32 = cos(ln.angle);
     let sf: f32 = sin(ln.angle);
     var fx: f32 = 0.0;
     var fy: f32 = GRAVITY;
     if (inp.thrust > 0.5) {
-        // "UP" rotated by angle => (-sin, -cos)
-        fx = -sf * THRUST;
+        // "UP" rotated by angle => (sin, -cos)
+        fx = sf * THRUST;
         fy = fy - cf * THRUST;
     }
     ln.vel_x = ln.vel_x + fx * dt;
     ln.vel_y = ln.vel_y + fy * dt;
     ln.pos_x = ln.pos_x + ln.vel_x * dt;
     ln.pos_y = ln.pos_y + ln.vel_y * dt;
-    ln.angle = ln.angle + omega * dt;
+    ln.angle = ln.angle + omega_eff * dt;
     ln.tick = ln.tick + 1u;
     ln.time_alive = f32(ln.tick - ln.spawn_tick) / 60.0;
 

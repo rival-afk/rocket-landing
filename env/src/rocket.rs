@@ -24,6 +24,8 @@ pub const MASS: f64 = 1.0;
 pub const BODY_W: f64 = 20.0;                // RectangleShape2D width
 pub const BODY_H: f64 = 24.0;                // RectangleShape2D height
 pub const BODY_OFF_Y: f64 = -2.0;            // Collision position (0, -2)
+pub const LINEAR_DAMP: f64 = 0.1;            // Godot default_linear_damp = 0.1
+pub const ANGULAR_DAMP: f64 = 1.0;           // Godot default_angular_damp = 1.0
 
 /// Corner offsets of the OBB in body-local space.
 const CORNERS: [(f64, f64); 4] = [
@@ -57,28 +59,26 @@ pub fn point_in_corridor(px: f64, py: f64) -> bool {
 /// True if any part of the rocket overlaps the rock (= dead by game rules).
 #[inline]
 pub fn rocket_intersects_rock(x: f64, y: f64, angle: f64) -> bool {
-    // 1) corners
-    for (cx, cy) in obb_corners(x, y, angle) {
-        if !point_in_corridor(cx, cy) {
+    // Godot tas_search.gd checks 3x3 grid of OBB points (corners + edge midpoints);
+    // this is much more lenient than dense edge sampling — same as production TAS.
+    const OFFS: [(f64, f64); 9] = [
+        (-BODY_W / 2.0, BODY_OFF_Y - BODY_H / 2.0),
+        (0.0,                       BODY_OFF_Y - BODY_H / 2.0),
+        ( BODY_W / 2.0, BODY_OFF_Y - BODY_H / 2.0),
+        (-BODY_W / 2.0, BODY_OFF_Y),
+        (0.0,                       BODY_OFF_Y),
+        ( BODY_W / 2.0, BODY_OFF_Y),
+        (-BODY_W / 2.0, BODY_OFF_Y + BODY_H / 2.0),
+        (0.0,                       BODY_OFF_Y + BODY_H / 2.0),
+        ( BODY_W / 2.0, BODY_OFF_Y + BODY_H / 2.0),
+    ];
+    let c = angle.cos();
+    let s = angle.sin();
+    for &(lx, ly) in &OFFS {
+        let px = x + lx * c - ly * s;
+        let py = y + lx * s + ly * c;
+        if !point_in_corridor(px, py) {
             return true;
-        }
-    }
-    // 2) edges — sample at 2-px granularity, then refine analytically
-    let corners = obb_corners(x, y, angle);
-    for i in 0..4 {
-        let (ax, ay) = corners[i];
-        let (bx, by) = corners[(i + 1) % 4];
-        let ex = bx - ax;
-        let ey = by - ay;
-        let len = ex.hypot(ey);
-        let steps = (len / 2.0).ceil().max(1.0) as usize;
-        for s in 0..=steps {
-            let t = s as f64 / steps as f64;
-            let px = ax + ex * t;
-            let py = ay + ey * t;
-            if !point_in_corridor(px, py) {
-                return true;
-            }
         }
     }
     false
@@ -152,24 +152,30 @@ pub fn step_body(
 ) {
     let dt = DT * time_scale;
 
-    // --- rotation: angular velocity is *set* directly (torque.gd semantics)
-    let torque_cmd = torque_cmd.clamp(-1.0, 1.0);
+    // --- rotation: angular velocity is *set* directly (torque.gd semantics),
+    // but the engine applies angular_damp on each tick BEFORE the rotate:
     let omega = torque_cmd * ANGULAR_SPEED;
+    let omega_effective = omega * (1.0 - ANGULAR_DAMP * dt);
 
-    // --- translation: gravity + thrust along body up
+    // --- translation: damp FIRST, then forces, then position integration
+    // (order per calibrated Godot model — TAS.md).
+    let linear_damp_f = 1.0 - LINEAR_DAMP * dt;
+    *vx *= linear_damp_f;
+    *vy *= linear_damp_f;
+
     let c = angle.cos();
     let s = angle.sin();
     let mut fx = 0.0f64;
-    let mut fy = GRAVITY * MASS; // down (+y)
+    let mut fy = GRAVITY * MASS;
     if thrust {
-        fx += -s * THRUST_POWER;
-        fy += -c * THRUST_POWER; // "UP" rotated by angle => (-sin, -cos)
+        fx += s * THRUST_POWER;
+        fy += -c * THRUST_POWER;
     }
     *vx += fx / MASS * dt;
     *vy += fy / MASS * dt;
     *x += *vx * dt;
     *y += *vy * dt;
-    *angle += omega * dt;
+    *angle += omega_effective * dt;
 }
 
 #[cfg(test)]
