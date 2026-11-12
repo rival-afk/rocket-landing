@@ -109,16 +109,25 @@ func center_at(y: float) -> float:
 	# плавный выход из стартовой точки, чтобы ракета не упёрлась в стену на старте
 	return v * clampf(absf(y) / (3.0 * KNOT), 0.0, 1.0)
 
+func tri(t: float) -> float:
+	var u := fposmod(t, 2.0)
+	return absf(u - 1.0) * 2.0 - 1.0
+
+func ridge(t: float, freq: float, amp: float, phase: float) -> float:
+	# треугольная волна — острые пики, угловатые переломы стен
+	var u := fposmod(t * freq + phase, 2.0)
+	return (absf(u - 1.0) * 2.0 - 1.0) * amp
+
 func half_at(y: float) -> float:
 	var k := floorf(y / KNOT)
 	var t := (y - k * KNOT) / KNOT
 	return lerpf(knot_half(k), knot_half(k + 1.0), t)
 
 func left_x(y: float) -> float:
-	return center_at(y) - half_at(y) + lane_offset
+	return center_at(y) - half_at(y) + lane_offset + ridge(y, 0.016, 17.0, 0.3) + ridge(y, 0.007, 11.0, 1.1)
 
 func right_x(y: float) -> float:
-	return center_at(y) + half_at(y) + lane_offset
+	return center_at(y) + half_at(y) + lane_offset + ridge(y, 0.014, 17.0, 2.2) + ridge(y, 0.006, 11.0, 0.7)
 
 func _update_segments() -> void:
 	if rocket == null:
