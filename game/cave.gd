@@ -1,21 +1,15 @@
 extends Node2D
 
 # Бесконечная процедурная пещера вниз.
-# Коридор — ломаная через узлы каждые KNOT px: смещение узлов и ширина
-# считаются хешем от индекса узла, промежуточные точки — линейная
-# интерполяция, поэтому на узлах всегда острые углы.
-# Всё детерминированно: пещера одинаковая из запуска в запуск.
-# lane_offset сдвигает всю пещеру по x (нужно для параллельных игр).
+# Коридор — аналитическая функция глубины y (узлы каждые KNOT px, линейная
+# интерполяция между ними, хеш от номера узла). Всё детерминированно.
+# Никаких сегментов/статик-тел не создаётся — пещера бесконечна,
+# потребление памяти постоянно независимо от глубины.
+# lane_offset сдвигает всю пещеру по x (для параллельных игр).
 
-const SEG_H := 256.0        # высота одного сегмента, px (один узел на сегмент)
 const KNOT := 256.0         # расстояние между узлами ломаной
-const STEP := 16.0          # шаг точек вдоль стены, px (делитель KNOT)
-const FAR := 1100.0         # ширина «каменного» массива за стеной
-const LOOKAHEAD := 1600.0   # на сколько ниже камеры генерировать
-const BEHIND := 700.0       # на сколько выше камеры ещё держим сегменты
-
-const MAX_SHIFT := 175.0    # макс. горизонтальное смещение коридора на узел (извилистее)
-const MIN_HALF := 60.0      # мин. полуширина коридора (уже)
+const MAX_SHIFT := 175.0    # макс. горизонтальное смещение коридора на узел
+const MIN_HALF := 60.0      # мин. полуширина коридора
 const HALF_VAR := 55.0      # разброс полуширины
 
 const ROCK_COLOR := Color(0.24, 0.17, 0.13)
@@ -29,10 +23,8 @@ const KNOT_TEX_W := 32        # узлов в таблице для шейдер
 # Кому сообщать о касании стены (game.gd). Если не задан — перезагрузка сцены.
 var killer_callback: Callable = Callable()
 
-var segments: Dictionary = {}
 var rocket: Node2D
 var reloading := false
-var _last_knot := -1000000000
 
 # GPU-отрисовка стен: один ColorRect с canvas_item шейдером + таблица узлов
 var wall_rect: ColorRect
@@ -44,15 +36,18 @@ func _ready() -> void:
 	if rocket == null:
 		rocket = get_node_or_null("../Rocket")
 	_build_wall_shader()
-	_update_segments()
 	_update_wall_tex()
 
 func _physics_process(_delta: float) -> void:
 	# шейдер-квад едет за ракетой каждый кадр (отрисовка на GPU)
 	if wall_rect != null and rocket != null:
 		wall_rect.global_position = Vector2(-VIEW_W / 2.0, rocket.global_position.y - VIEW_H * 0.5)
-	_update_segments()
 	_update_wall_tex()
+
+	# аналитическая проверка столкновения (никаких статик-тел — память не растёт)
+	if rocket != null:
+		if _obb_outside_corridor(rocket):
+			_kill_rocket()
 
 func _build_wall_shader() -> void:
 	if wall_rect != null:
@@ -84,7 +79,7 @@ func _update_wall_tex() -> void:
 	for i in range(KNOT_TEX_W):
 		var k := float(base + i)
 		var off := 0.0 if k == 0.0 else (cave_hash(k) * 2.0 - 1.0) * MAX_SHIFT
-		knot_img.set_pixel(i, 0, Color(off, knot_half(k), 0.0))
+		knot_img.set_pixel(i, 0, Color(off + lane_offset, knot_half(k), 0.0))
 	knot_tex.update(knot_img)
 	wall_rect.material.set_shader_parameter("knot_start", float(base))
 
@@ -120,84 +115,75 @@ func left_x(y: float) -> float:
 func right_x(y: float) -> float:
 	return center_at(y) + half_at(y) + lane_offset
 
-func _update_segments() -> void:
-	if rocket == null:
-		return
-	var y := rocket.global_position.y
-	# узлы меняются раз в SEG_H — между узлами окно генерации не трогаем
-	var knot := int(floor(y / SEG_H))
-	if knot == _last_knot:
-		return
-	_last_knot = knot
-	var i0 := int(floor((y - BEHIND) / SEG_H))
-	var i1 := int(floor((y + LOOKAHEAD) / SEG_H))
-	for i in range(i0, i1 + 1):
-		if not segments.has(i):
-			segments[i] = _build_segment(i)
-	for i in segments.keys():
-		if i < i0 - 1 or i > i1 + 1:
-			segments[i].queue_free()
-			segments.erase(i)
+func point_in_corridor(px: float, py: float) -> bool:
+	var c := center_at(py) + lane_offset
+	return px >= c - half_at(py) and px <= c + half_at(py)
 
-func _build_segment(i: int) -> StaticBody2D:
-	var seg := StaticBody2D.new()
-	seg.name = "CaveSegment_%d" % i
-	seg.collision_layer = 2   # стены только на слое 2 (для лидаров и столкновений ракеты)
-	seg.collision_mask = 0
-	var y0 := i * SEG_H
-	var y1 := y0 + SEG_H
-	var edge_left := _edge_points(y0, y1, true)
-	var edge_right := _edge_points(y0, y1, false)
-	_add_side(seg, edge_left, true, y0, y1)
-	_add_side(seg, edge_right, false, y0, y1)
+# Аналитический лидар: маршируем луч до упора в стену (или max_dist),
+# затем уточняем границу бисекцией. Точность ~0.1 px, без физтел.
+# dir должен быть НЕ нулевым вектором; длина возвращаемого расстояния в px.
+func corridor_ray_distance(origin: Vector2, dir: Vector2, max_dist: float) -> float:
+	var d := dir.normalized()
+	var step := 2.0
+	var t := step
+	var last_inside := 0.0
+	while t <= max_dist:
+		if not point_in_corridor(origin.x + d.x * t, origin.y + d.y * t):
+			# уточняем границу бисекцией на [last_inside, t]
+			var lo := last_inside
+			var hi := t
+			for _i in range(10):
+				var mid := (lo + hi) * 0.5
+				if point_in_corridor(origin.x + d.x * mid, origin.y + d.y * mid):
+					lo = mid
+				else:
+					hi = mid
+			return (lo + hi) * 0.5
+		last_inside = t
+		t += step
+	# не уперлись — проверяем конечную точку
+	if not point_in_corridor(origin.x + d.x * max_dist, origin.y + d.y * max_dist):
+		var lo := last_inside
+		var hi := max_dist
+		for _i in range(10):
+			var mid := (lo + hi) * 0.5
+			if point_in_corridor(origin.x + d.x * mid, origin.y + d.y * mid):
+				lo = mid
+			else:
+				hi = mid
+		return (lo + hi) * 0.5
+	return max_dist
 
-	# Детектор касания стен ракетой (kill plane)
-	_add_killer(seg, edge_left, true, y0, y1)
-	_add_killer(seg, edge_right, false, y0, y1)
+# Аналитическая проверка: выходит ли OBB ракеты за коридор (касание породы).
+# Форма 20×24 (см. rocket.tscn), центр коллайдера на (0, -2) от корня.
+# Центр OBB бывает строго внутри коридора, пока рот в стене, поэтому сэмплируем
+# периметр (5 точек на каждую из 4 сторон).
+func _obb_outside_corridor(r: Node2D) -> bool:
+	var rad := r.rotation
+	var pos := r.global_position
+	var center := pos + Vector2(0.0, -2.0).rotated(rad)
+	var hw := 10.0
+	var hh := 12.0
+	var u := Vector2(hw, 0.0).rotated(rad)   # полу-ось по локальной X
+	var v := Vector2(0.0, hh).rotated(rad)   # полу-ось по локальной Y
+	# 4 угла
+	for i in range(4):
+		var sx := 1.0 if (i == 1 or i == 2) else -1.0
+		var sy := 1.0 if (i >= 2) else -1.0
+		if not point_in_corridor((center + u * sx + v * sy).x, (center + u * sx + v * sy).y):
+			return true
+	# четверти сторон (между углами)
+	for frac: float in [0.25, 0.5, 0.75]:
+		var a: float = lerp(-1.0, 1.0, frac)
+		var samples: Array[Vector2] = [center + u + v * a, center - u + v * a, center + u * a + v, center + u * a - v]
+		for p: Vector2 in samples:
+			if not point_in_corridor(p.x, p.y):
+				return true
+	return false
 
-	add_child(seg)
-	return seg
-
-func _side_polygon(edge: PackedVector2Array, is_left: bool, y0: float, y1: float) -> PackedVector2Array:
-	var poly := PackedVector2Array(edge)
-	if is_left:
-		poly.append(Vector2(lane_offset - FAR, y1))
-		poly.append(Vector2(lane_offset - FAR, y0))
-	else:
-		poly.append(Vector2(lane_offset + FAR, y1))
-		poly.append(Vector2(lane_offset + FAR, y0))
-	return poly
-
-func _edge_points(y0: float, y1: float, is_left: bool) -> PackedVector2Array:
-	var pts := PackedVector2Array()
-	var y := y0
-	while y < y1:
-		pts.append(Vector2(left_x(y) if is_left else right_x(y), y))
-		y += STEP
-	# гарантируем точное попадание в узел (острый угол)
-	pts.append(Vector2(left_x(y1) if is_left else right_x(y1), y1))
-	return pts
-
-func _add_side(seg: StaticBody2D, edge: PackedVector2Array, is_left: bool, y0: float, y1: float) -> void:
-	var poly := _side_polygon(edge, is_left, y0, y1)
-	# визуал теперь рисует GPU-шейдер (cave_walls.gdshader) — здесь только коллизия
-	var col := CollisionPolygon2D.new()
-	col.polygon = poly
-	seg.add_child(col)
-
-func _add_killer(seg: StaticBody2D, edge: PackedVector2Array, is_left: bool, y0: float, y1: float) -> void:
-	var area := Area2D.new()
-	area.collision_layer = 0
-	area.collision_mask = 1  # только ракеты (слой 1)
-	area.body_entered.connect(_on_wall_touched)
-	var col := CollisionPolygon2D.new()
-	col.polygon = _side_polygon(edge, is_left, y0, y1)
-	area.add_child(col)
-	seg.add_child(area)
-
-func _on_wall_touched(body: Node2D) -> void:
+func _kill_rocket() -> void:
 	if killer_callback.is_valid():
-		killer_callback.call(body)
+		killer_callback.call(rocket)
 		return
 	if reloading:
 		return

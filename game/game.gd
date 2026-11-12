@@ -689,21 +689,27 @@ func _save_best() -> void:
 
 # ---------- лидары + кеш состояния на PHYSICS-тик ----------
 
-func _lidar_distances(rocket: Node2D) -> Dictionary:
+func _lidar_distances(lane) -> Dictionary:
+	var rocket: Node2D = lane.rocket
+	var cave = lane.cave
 	var result := {}
-	var map := {
-		"right": "LidarRight",
-		"right_down": "LidarRightDown",
-		"down": "LidarDown",
-		"left_down": "LidarLeftDown",
-		"left": "LidarLeft",
+	var keys := ["right", "right_down", "down", "left_down", "left"]
+	if rocket == null or cave == null:
+		for key in keys:
+			result[key] = LIDAR_RANGE
+		return result
+	var o := rocket.global_position
+	var rot := rocket.rotation
+	# направления те же, что были у RayCast2D в rocket.tscn, включая поворот ракеты
+	var dirs := {
+		"right": Vector2(1, 0).rotated(rot),
+		"right_down": Vector2(1, 1).normalized().rotated(rot),
+		"down": Vector2(0, 1).rotated(rot),
+		"left_down": Vector2(-1, 1).normalized().rotated(rot),
+		"left": Vector2(-1, 0).rotated(rot),
 	}
-	for key in map.keys():
-		var rc := rocket.get_node_or_null(map[key]) as RayCast2D
-		var d := LIDAR_RANGE
-		if rc != null and rc.is_colliding():
-			d = rocket.global_position.distance_to(rc.get_collision_point())
-		result[key] = snappedf(d, 0.1)
+	for key in dirs.keys():
+		result[key] = snappedf(cave.corridor_ray_distance(o, dirs[key], LIDAR_RANGE), 0.1)
 	return result
 
 # Снимок сессионной статистики для /state
@@ -759,7 +765,7 @@ func _refresh_lane_cache(lane) -> void:
 		"thrust": thrust_now,
 		"torque": snappedf(torque_now, 0.01),
 		"time_alive": snappedf(time_alive, 0.01),
-		"lidars": _lidar_distances(r),
+		"lidars": _lidar_distances(lane),
 		"session": _session_state(lane),
 	}
 

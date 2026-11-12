@@ -7,8 +7,7 @@
 size = Vector2(20, 24)
 
 [node name="Rocket" type="RigidBody2D"]
-collision_mask = 2
-continuous_cd = 2
+collision_mask = 0
 script = ExtResource("2_0xm2m")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -20,23 +19,3 @@ shape = SubResource("RectangleShape2D_e82u5")
 
 [node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true
-
-[node name="LidarRight" type="RayCast2D" parent="."]
-target_position = Vector2(280, 0)
-collision_mask = 2
-
-[node name="LidarRightDown" type="RayCast2D" parent="."]
-target_position = Vector2(198, 198)
-collision_mask = 2
-
-[node name="LidarDown" type="RayCast2D" parent="."]
-target_position = Vector2(0, 280)
-collision_mask = 2
-
-[node name="LidarLeftDown" type="RayCast2D" parent="."]
-target_position = Vector2(-198, 198)
-collision_mask = 2
-
-[node name="LidarLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-280, 0)
-collision_mask = 2
