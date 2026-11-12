@@ -1,0 +1,9 @@
+# Rust / maturin artifacts
+env/target/
+target/
+env/**/*.whl
+env/**/build/
+
+# Godot artifacts
+.godot/
+*.tmp

@@ -1,0 +1,37 @@
+[package]
+name = "rocket-landing-env"
+version = "1.1.0"
+edition = "2021"
+description = "Rust/PyO3 environment for Rocket Landing (deterministic cave faller). Perfect-ish reimplementation of the Godot 4 physics + game logic; CPU (rayon) + GPU (wgpu compute) batch backends."
+license = "MIT"
+rust-version = "1.74"
+
+[lib]
+# cdylib = Python extension module via PyO3, rlib = linkable from other Rust crates
+crate-type = ["cdylib", "rlib"]
+name = "rocket_landing_env"
+
+[features]
+default = ["gpu", "python"]
+gpu = ["dep:wgpu"]
+python = ["dep:pyo3"]
+
+[dependencies]
+pyo3 = { version = "0.21", features = ["abi3-py38", "extension-module"], optional = true }
+rayon = "1.10"
+glam = "0.29"
+bytemuck = { version = "1.14", features = ["derive"] }
+wgpu = { version = "0.20", optional = true }
+pollster = "0.3"
+futures = "0.3"
+thiserror = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[package.metadata.maturin]
+name = "rocket_landing_env"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
