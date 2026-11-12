@@ -129,6 +129,30 @@ pub fn solve(cfg: TasSolveConfig) -> TasResult {
             }
         }
 
+        // dedup: keep only best-scoring node per quantized state key —
+        // otherwise the beam fills with near-identical branches that all die together
+        let quant = |n: &Node| -> i64 {
+            let kx = (n.x * 2.0).round() as i64;
+            let ky = (n.y * 2.0).round() as i64;
+            let kvx = n.vx.round() as i64;
+            let kvy = n.vy.round() as i64;
+            let kr = (n.angle * 8.0).round() as i64;
+            // pack with large offsets to avoid accidental signs
+            kx ^ (ky.wrapping_shl(21) | ky >> 43)
+               ^ (kvx.wrapping_shl(32) | kvx >> 32)
+               ^ (kvy.wrapping_shl(43) | kvy >> 21)
+               ^ (kr.wrapping_shl(53) | kr >> 11)
+        };
+        let mut seen = std::collections::HashSet::with_capacity(candidates.len());
+        let mut unique: Vec<Node> = Vec::with_capacity(candidates.len());
+        for c in candidates {
+            let k = quant(&c);
+            if seen.insert(k) {
+                unique.push(c);
+            }
+        }
+        let mut candidates = unique;
+
         // diversified selection: one best branch per (x-bucket, vy-bucket), then fill by score —
         // prevents greedy top-k from collapsing the beam into near-identical states
         const BX: f64 = 48.0;
@@ -177,6 +201,11 @@ pub fn solve(cfg: TasSolveConfig) -> TasResult {
                     survived: n.alive,
                 };
             }
+        }
+
+        if tick % 10 == 0 {
+            let dedup_size = beam.len();
+            eprintln!("tick={:4} beam={} unique={} deepest={:.3} last_alive={}", tick, dedup_size, candidates.len(), deepest, beam.iter().filter(|n| n.alive).count());
         }
 
         if let Some(goal) = cfg.goal_depth_m {

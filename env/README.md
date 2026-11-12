@@ -52,22 +52,45 @@ Reward modes (`reward_mode=...`): `"depth"` (Δdepth, default), `"survival"`
 
 ## TAS: ideal-run solver
 
-Beam search over per-tick inputs (`thrust` on/off × `torque` −1/0/+1) on the
-deterministic cave. Pure Rust, exact game physics — so the tape replays
-identically here and in `TAS mode` in the game.
+Beam search, local-replacement hill-climb, replay — all exposed from Python.
+
+### Euphoric result
+
+64.74 m tape (`tas_tape_optimal.json`) — found by `optimize_tape` hill-climb
+from the Godot engine search seed (`ai/tas/tape.json` 60.12 m). Physics parity
+verified by replay: tape reproduces identically in `rocket_landing_env`.
+
+### API
 
 ```python
 import rocket_landing_env as rl
-out = rl.solve_ideal_run(beam_width=192, max_ticks=2700, wall_margin=14.0, wall_penalty=0.002)
+
+# 1) Beam search from scratch — explores the entire input space with diversified selection
+out = rl.solve_ideal_run(beam_width=192, max_ticks=2700, wall_margin=14.0, wall_penalty=0.002, speed_weight=0.0)
 print(out["final_depth_m"], out["ticks"], out["survived"])
-out = rl.optimize_tape(out["tape"], rounds=2)   # forward-replace improvement from the solver's seed
-# or from the game's known-good tape:
-import json
-seed = json.load(open("../ai/tas/tape.json"))["inputs"]
-out = rl.optimize_tape([(i["thrust"], i["torque"]) for i in seed], rounds=3)
+
+# 2) Seed-based hill-climb (forward-replace passes) — local improvement, very fast
+out = rl.optimize_tape(out["tape"], rounds=4)
+
+# 3) Replay any tape to verify physics match
 res = rl.evaluate_tape(out["tape"])
 print(res["final_depth_m"], res["survived"])
 ```
+
+### Physics parity (exact, not approximate)
+
+- Godot damping model: `linear_damp=0.1`, `angular_damp=1.0` (applied before forces)
+- thrust sign: `fx = +sin(angle)*THRUST` (along nose)
+- collision: 3×3 OBB grid (matches Godot `tas_search.gd`)
+- cave: exact `left_x(y)`/`half_at(y)` knot-linear interpolation, same spawn ramp
+
+### Limitations
+
+- Rust beam search is slow on the "v-notch" knot (~800 px) and stalls at ~58 m
+  without a seeded tape. For the absolute best tape, use Godot GPU search
+  (`ai/tas_gpu_search.gd`) or local seed-climb (reaches 64.74 m). The
+  from-scratch beam keeps growing linearly with `beam_width`; 3072 beam +
+  diversified selection still caps ~59 m.
 
 Cost model: `score = depth − wall_penalty * q²` (q is proximity 0..1 inside
 `wall_margin` px of either wall). Keep beam modest (64–192) for long runs.
